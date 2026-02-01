@@ -90,16 +90,10 @@
       background: #11162a;
       padding: 2.5rem 3rem;
       border-radius: 16px;
-
-      /* crisp border */
       border: 1px solid rgba(167,139,250,0.45);
-
-      /* outward-only glow */
       filter:
         drop-shadow(0 0 10px rgba(167,139,250,0.35))
         drop-shadow(0 0 20px rgba(91,43,224,0.25));
-
-      /* depth */
       box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
@@ -126,8 +120,8 @@
     }
 
     .pinole-photo img {
-      width: 320px;          /* desktop size */
-      max-width: 90%;        /* mobile safety */
+      width: 320px;
+      max-width: 90%;
       height: auto;
       border-radius: 14px;
       object-fit: cover;
@@ -135,26 +129,52 @@
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
-      header, nav ul {
+      /* Mobile navbar: 3 per row */
+      header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
+
       nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
       }
+
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+
+      /* Photo rows stack */
       .athletic-row {
         flex-direction: column;
         gap: 0.5rem;
       }
+
       .athletic-row img {
         width: 100% !important;
         height: auto !important;
       }
     }
 
+    /* Extra small screens fallback to 2 per row */
+    @media (max-width: 400px) {
+      nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+      }
+    }
+
     @media (min-width: 768px) {
       .pinole-photo img {
-        width: 380px; /* slightly larger on tablets */
+        width: 380px;
       }
     }
   </style>
@@ -188,7 +208,6 @@
     <li>State Playoff Participant - Singles & Doubles (2015)</li>
   </ul>
 
-  <!-- Athletic row: side images smaller, center larger -->
   <div class="athletic-row">
     <img src="DVCTEN11.jpeg" alt="ITA Tournament" style="flex:0.9; max-height:280px;">
     <img src="ojaiwin.JPEG" alt="Ojai Win" style="flex:1.4; max-height:280px;">
@@ -216,7 +235,6 @@
     </li>
   </ul>
 
-  <!-- Pinole Valley Centered Photo -->
   <div class="pinole-photo">
     <img src="PVBBALL.jpeg" alt="Pinole Valley High School Athletics">
   </div>
