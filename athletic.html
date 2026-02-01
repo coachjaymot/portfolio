@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeffrey Jaymot | Athletic Career</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -101,7 +101,7 @@
     .athletic-row {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: flex-start; /* top-aligned so images show fully */
       gap: 10px;
       margin-top: 1rem;
       margin-bottom: 1rem;
@@ -109,10 +109,13 @@
 
     .athletic-row img {
       border-radius: 12px;
-      object-fit: cover;
+      height: auto;           /* natural height */
+      max-width: 32%;         /* 3 images fit nicely */
+      object-fit: contain;    /* show full image */
+      flex: none;             /* remove flex scaling */
     }
 
-    /* Pinole Valley photo (controlled size) */
+    /* Pinole Valley photo */
     .pinole-photo {
       display: flex;
       justify-content: center;
@@ -120,7 +123,7 @@
     }
 
     .pinole-photo img {
-      width: 320px;
+      width: 380px;
       max-width: 90%;
       height: auto;
       border-radius: 14px;
@@ -129,7 +132,7 @@
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
-      /* Mobile navbar: 3 per row */
+      /* Mobile navbar */
       header {
         flex-direction: column;
         align-items: center;
@@ -162,6 +165,11 @@
         width: 100% !important;
         height: auto !important;
       }
+
+      .pinole-photo img {
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     /* Extra small screens fallback to 2 per row */
@@ -169,12 +177,6 @@
       nav ul {
         grid-template-columns: repeat(2, 1fr);
         max-width: 300px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .pinole-photo img {
-        width: 380px;
       }
     }
   </style>
@@ -209,9 +211,9 @@
   </ul>
 
   <div class="athletic-row">
-    <img src="DVCTEN11.jpeg" alt="ITA Tournament" style="flex:0.9; max-height:280px;">
-    <img src="ojaiwin.JPEG" alt="Ojai Win" style="flex:1.4; max-height:280px;">
-    <img src="lastmatch.JPEG" alt="Last Match" style="flex:0.9; max-height:280px;">
+    <img src="DVCTEN11.jpeg" alt="ITA Tournament">
+    <img src="ojaiwin.JPEG" alt="Ojai Win">
+    <img src="lastmatch.JPEG" alt="Last Match">
   </div>
 </div>
 
@@ -242,4 +244,5 @@
 
 </body>
 </html>
+
 
