@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* ================= GLOBAL STYLES ================= */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,24 +22,23 @@
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ================= HEADER / NAV ================= */
+    /* ================= HEADER / NAV (EXACT MATCH TO HOME) ================= */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 3rem;
+      padding: 1.5rem 3rem;
       background: #0b0d18;
       flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
       font-size: 1.4rem;
       font-weight: 800;
+      color: #ffffff;
     }
 
     nav ul {
@@ -54,6 +54,8 @@
       font-weight: 600;
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
+      text-align: center;
+      transition: all 0.2s ease;
     }
 
     nav a:hover,
@@ -71,13 +73,13 @@
 
     h1, h2, h3 {
       color: #ffffff;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     h1 {
       text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 2.8rem;
     }
 
     p {
@@ -97,15 +99,16 @@
 
     /* ================= SECTIONS ================= */
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
 
     .strategy-box {
       background: #11162a;
       border-radius: 16px;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      border-left: 4px solid #5b2be0; /* Added subtle accent */
     }
 
     .strategy-box h3 {
@@ -122,15 +125,37 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
 
-    /* ================= RESPONSIVE ================= */
+    /* ================= RESPONSIVE (MATCHED) ================= */
+    @media (max-width: 900px) {
+      header {
+        padding: 1rem 1.5rem;
+      }
+    }
+
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+      header {
+        flex-direction: column;
+        align-items: center;
       }
 
-      .container {
-        padding: 0 1rem;
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
       }
+
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 0;
+      }
+
+      h1 { font-size: 2rem; }
+      .container { padding: 0 1rem; }
     }
   </style>
 </head>
@@ -146,7 +171,7 @@
       <li><a href="skills.html">Skill Portfolio</a></li>
       <li><a href="coaching.html">Coaching Career</a></li>
       <li><a href="athletic.html">Athletic Career</a></li>
-      <li><a href="tips.html">Sports Tips</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
     </ul>
   </nav>
 </header>
@@ -155,7 +180,7 @@
   <h1>Emotional Regulation Strategies</h1>
 
   <section>
-    <p>Below are a few emotional regulation strategies that I find useful:</p>
+    <p>Below are a few emotional regulation strategies that I find useful for athletes and coaches alike:</p>
 
     <div class="strategy-box">
       <h3>Mindfulness</h3>
