@@ -22,17 +22,18 @@
       line-height: 1.6;
     }
 
-    /* ================= HEADER / NAV (EXACT MATCH TO HOME) ================= */
+    /* ================= HEADER / NAV (CENTERED VERSION) ================= */
     header {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column; /* Stacks Logo and Nav vertically */
+      align-items: center;    /* Centers them horizontally */
+      justify-content: center;
       padding: 1.5rem 3rem;
       background: #0b0d18;
-      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 100;
+      gap: 1rem;             /* Adds space between logo and nav */
     }
 
     .logo {
@@ -44,6 +45,7 @@
     nav ul {
       list-style: none;
       display: flex;
+      justify-content: center; /* Centers the list items */
       gap: 1.5rem;
       flex-wrap: wrap;
     }
@@ -108,7 +110,7 @@
       padding: 2rem;
       margin-bottom: 2rem;
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      border-left: 4px solid #5b2be0; /* Added subtle accent */
+      border-left: 4px solid #5b2be0;
     }
 
     .strategy-box h3 {
@@ -125,7 +127,7 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
     }
 
-    /* ================= RESPONSIVE (MATCHED) ================= */
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
       header {
         padding: 1rem 1.5rem;
@@ -133,19 +135,12 @@
     }
 
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-
       nav ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 0.8rem;
-        margin-top: 1rem;
         width: 100%;
         max-width: 400px;
-        justify-items: center;
       }
 
       nav a {
@@ -186,7 +181,7 @@
       <h3>Mindfulness</h3>
       <p>Berner et al. (2009) define mindfulness as the “nonjudgemental focus of one’s attention on the experience that occurs in the present moment.” Mindfulness encourages the acceptance of thoughts (including unwanted thoughts) and commitment to action rather than fighting negative thoughts and unpleasant emotions (Berner et al., 2009; Krane & Williams, 2015).</p>
     </div>
-
+    
     <div class="strategy-box">
       <h3>Reframing</h3>
       <p>Cognitive restructuring, also known as reframing, is a cognitive technique for dealing with negative thoughts or negative self-talk and is the process in which an individual creates alternative ways of looking at the world (Williams, Zinsser, & Bunker, 2015).</p>
