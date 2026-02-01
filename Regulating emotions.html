@@ -22,42 +22,53 @@
       line-height: 1.6;
     }
 
-    /* ================= HEADER / NAV (CENTERED VERSION) ================= */
+    /* ================= HEADER / NAV (FIXED CENTERING) ================= */
     header {
       display: flex;
-      flex-direction: column; /* Stacks Logo and Nav vertically */
-      align-items: center;    /* Centers them horizontally */
+      flex-direction: column; 
+      align-items: center;    
       justify-content: center;
-      padding: 1.5rem 3rem;
+      padding: 1.5rem 2rem;
       background: #0b0d18;
       position: sticky;
       top: 0;
       z-index: 100;
-      gap: 1rem;             /* Adds space between logo and nav */
+      gap: 1.2rem;
+      width: 100%;
     }
 
     .logo {
       font-size: 1.4rem;
       font-weight: 800;
       color: #ffffff;
+      text-align: center;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center; /* Ensures the nav container is centered */
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      justify-content: center; /* Centers the list items */
-      gap: 1.5rem;
+      justify-content: center; 
+      gap: 1rem;
       flex-wrap: wrap;
+      width: 100%;
+      max-width: 1000px;
     }
 
     nav a {
       text-decoration: none;
       color: rgba(255,255,255,0.8);
       font-weight: 600;
-      padding: 0.4rem 0.8rem;
+      padding: 0.5rem 0.8rem;
       border-radius: 6px;
       text-align: center;
       transition: all 0.2s ease;
+      display: inline-block;
     }
 
     nav a:hover,
@@ -73,35 +84,11 @@
       padding: 0 2rem;
     }
 
-    h1, h2, h3 {
-      color: #ffffff;
-      margin-bottom: 1.5rem;
-    }
-
     h1 {
       text-align: center;
       margin-bottom: 2.5rem;
       font-size: 2.8rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: rgba(255,255,255,0.85);
-    }
-
-    ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-      color: rgba(255,255,255,0.85);
-    }
-
-    /* ================= SECTIONS ================= */
-    section {
-      margin-bottom: 3.5rem;
+      color: #ffffff;
     }
 
     .strategy-box {
@@ -118,39 +105,40 @@
       color: #a78bfa;
     }
 
-    /* ================= REFERENCES ================= */
-    .references {
-      font-size: 0.95rem;
-      background: #11162a;
-      padding: 1.5rem 2rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
-
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 900px) {
+    /* ================= RESPONSIVE FIXES ================= */
+    @media (max-width: 768px) {
       header {
-        padding: 1rem 1.5rem;
+        padding: 1.2rem 1rem;
+      }
+      
+      nav ul {
+        gap: 0.5rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
       }
     }
 
     @media (max-width: 600px) {
       nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.8rem;
-        width: 100%;
-        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns looks cleaner on small screens */
+        gap: 0.6rem;
+        justify-content: center;
+        align-content: center;
       }
 
       nav a {
-        display: block;
         width: 100%;
-        padding: 0.6rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px; /* Better for touch targets */
       }
 
       h1 { font-size: 2rem; }
-      .container { padding: 0 1rem; }
     }
   </style>
 </head>
@@ -162,11 +150,11 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="professional.html">Professional Experience</a></li>
-      <li><a href="skills.html">Skill Portfolio</a></li>
-      <li><a href="coaching.html">Coaching Career</a></li>
-      <li><a href="athletic.html">Athletic Career</a></li>
-      <li><a href="tips.html" class="active">Sports Tips</a></li>
+      <li><a href="professional.html">Professional</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="athletic.html">Athletic</a></li>
+      <li><a href="tips.html" class="active">Tips</a></li>
     </ul>
   </nav>
 </header>
@@ -175,27 +163,21 @@
   <h1>Emotional Regulation Strategies</h1>
 
   <section>
-    <p>Below are a few emotional regulation strategies that I find useful for athletes and coaches alike:</p>
-
     <div class="strategy-box">
       <h3>Mindfulness</h3>
-      <p>Berner et al. (2009) define mindfulness as the “nonjudgemental focus of one’s attention on the experience that occurs in the present moment.” Mindfulness encourages the acceptance of thoughts (including unwanted thoughts) and commitment to action rather than fighting negative thoughts and unpleasant emotions (Berner et al., 2009; Krane & Williams, 2015).</p>
-    </div>
-    
-    <div class="strategy-box">
-      <h3>Reframing</h3>
-      <p>Cognitive restructuring, also known as reframing, is a cognitive technique for dealing with negative thoughts or negative self-talk and is the process in which an individual creates alternative ways of looking at the world (Williams, Zinsser, & Bunker, 2015).</p>
+      <p>Berner et al. (2009) define mindfulness as the “nonjudgemental focus of one’s attention on the experience that occurs in the present moment.” Mindfulness encourages the acceptance of thoughts and commitment to action rather than fighting negative emotions.</p>
     </div>
 
     <div class="strategy-box">
-      <h3>Countering</h3>
-      <p>Countering is another method described as an internal dialogue that uses facts and reasoning to refute the beliefs leading to negative thoughts (Williams, Zinsser, & Bunker, 2015).</p>
+      <h3>Reframing</h3>
+      <p>Cognitive restructuring, also known as reframing, is a technique for dealing with negative thoughts by creating alternative ways of looking at the situation (Williams, Zinsser, & Bunker, 2015).</p>
     </div>
 
     <div class="strategy-box">
       <h3>Deep Breathing</h3>
-      <p>Positive Coaching Alliance (n.d.) states that deep breathing is a great way to reduce anxiety and stress responses, increase oxygen levels, calm the nervous system, and reduce tension.</p>
+      <p>Deep breathing is a great way to reduce anxiety, increase oxygen levels, and calm the nervous system during high-pressure moments.</p>
     </div>
+  </section>
 
     <div class="strategy-box">
       <h3>Emotional Intelligence and Awareness</h3>
