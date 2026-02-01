@@ -68,7 +68,6 @@
       background: linear-gradient(135deg, #0f1220, #1a1f36);
     }
 
-    /* Image grid takes ~65-75% of hero width */
     .hero-images {
       flex: 0 0 65%;
       display: grid;
@@ -86,7 +85,6 @@
       border-radius: 12px;
     }
 
-    /* Hero text takes 25-35% of width */
     .hero-content {
       flex: 0 0 25%;
       padding: 5rem 3rem;
@@ -139,7 +137,7 @@
     }
 
     .info-box h2 {
-      text-align: center; /* center titles */
+      text-align: center;
       margin-bottom: 1rem;
     }
 
@@ -228,6 +226,7 @@
     }
 
     @media (max-width: 900px) {
+      /* Stack hero vertically */
       .hero {
         flex-direction: column;
       }
@@ -244,14 +243,76 @@
         width: 100%;
         padding: 3rem 2rem;
       }
+
+      /* Nav stack & spacing */
+      header {
+        padding: 1rem 1.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+
+      /* Section padding & margins */
+      .info-grid {
+        padding: 0 1.5rem;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .info-box {
+        padding: 1.5rem;
+      }
+
+      .writing {
+        margin: 3rem 1rem;
+        font-size: 1rem;
+      }
+
+      /* Hero font sizes */
+      .hero-content h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
     }
 
     @media (max-width: 600px) {
+      /* Hero images single column */
       .hero-images {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 150px);
+        gap: 0.4rem;
+      }
+
+      .hero-content {
+        padding: 2rem 1.5rem;
+      }
+
+      /* Info boxes stack naturally */
+      .info-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 1rem;
+      }
+
+      /* Reduce hero vertical space */
+      .hero {
+        min-height: auto;
       }
     }
+
   </style>
 </head>
 
@@ -350,7 +411,7 @@
 
 </div>
 
-<!-- Add your video, gallery, and contact sections here -->
+<!-- Placeholder for video, gallery, contact sections -->
 
 </body>
 </html>
