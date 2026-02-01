@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Key Mental Skills | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: rgba(229, 231, 235, 0.9);
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= CONTENT CONTAINER ================= */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background: #11162a;
+      border-radius: 16px;
+    }
+
+    /* ================= REFERENCES ================= */
+    .references {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: rgba(229, 231, 235, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>4 Key Mental Skills Techniques</h1>
+
+  <p>
+    Here are 4 mental skills techniques that had frequent utility for me as an athlete and coach. 
+  </p>
+
+  <h2>Emotional Awareness and Arousal Regulation</h2>
+  <p>
+    <strong>Emotional Intelligence and Emotional Awareness:</strong>   
+    Sterrett and Jansen (2015) discuss emotional intelligence, which is the ability to know one’s own emotions, as well as the ability to understand others’ emotions and intentions. Sports require composure when faced with adversity. Athletes must be self-aware of their emotions and mature enough to regulate them.
+  </p>
+  <p>
+    For myself, the inverted U theory helped me understand the value of self-regulation or arousal regulation. Williams, and Reifsteck (2017) state that this theory proposes that performance is best at a moderate optimal arousal level and performance declines as arousal increases or decreases from that optimal level. Although the theory is not one-size-fits-all, it truly helped me realize that if I could reduce my anxiety levels as an extremely anxious athlete, I could perform better.
+  </p>
+
+  <h2>Self-Talk</h2>
+  <p>
+    Self-talk is the narrative that occurs in one’s own head. When the narrative is negative, this can lead to the continuation or worsening of negative thoughts and emotions that can influence behavior and performance. Establishing good self-talk strategies, such as thought stoppage, changing negative thoughts into positive ones, countering or reframing, is incredibly important in positively influencing performance (Burton & Raedeke, 2018; Etnier, 2017; Jackson, 2021).
+  </p>
+  <p>
+    For myself and for many athletes that I have coached, the narrative that goes on in our head is negative. Recognizing that and using mental skills training to change or address that narrative can make a huge impact. As we change that narrative to a positive one, we can think more positively, experience more positive emotions, and ultimately behave and perform better.
+  </p>
+
+  <h2>Mindfulness</h2>
+  <p>
+    Berner et al. (2009) define mindfulness as the “nonjudgemental focus of one’s attention on the experience that occurs in the present moment.” Mindfulness encourages the acceptance of thoughts (including unwanted thoughts) and commitment to action rather than fighting negative thoughts and unpleasant emotions (Berner et al., 2009; Krane & Williams, 2015).
+  </p>
+  <p>
+    As with many mental skills training techniques, there has to be some kind of recognition or acknowledgment of our thoughts and feelings. Many of these techniques revolve around fighting these thoughts and feelings and I appreciate that mindfulness takes a different approach. As mentioned in the definition, it is one of acknowledgement in the moment without judgement and instead of fighting these thoughts and feelings, we accept them and commit to action. I love the element of committing to action and find that mindfulness works for some people better than other mental skills training techniques. Not everyone wants to fight their thoughts or feelings. For many, it is simpler to accept them and find a way to keep moving forward.
+  </p>
+
+  <h2>Reframing and Countering</h2>
+  <p>
+    <strong>Reframing:</strong>  
+    Cognitive restructuring, also known as reframing, is a cognitive technique for dealing with negative thoughts or negative self-talk and is the process in which an individual creates alternative ways of looking at the world (Williams, Zinsser, & Bunker, 2015).
+  </p>
+  <p>
+    <strong>Countering:</strong>  
+    Countering is another method that Williams, Zinsser, & Bunker (2015) describe as an internal dialogue that uses facts and reasoning to refute beliefs leading to negative thoughts.
+  </p>
+  <p>
+    As mentioned above, there are many ways of fighting the narrative or thoughts that go on in one’s head. Reframing and countering are examples of mental skills that do just that. Reframing takes a scenario and allows individuals to look at a situation through an alternative lens or through an alternative explanation. Countering is similar but uses facts and reasoning to refute beliefs that lead to negative thoughts. I find both to be very helpful when working with athletes as athletes fail to see the rational sides of things when they are in practice or competition. Offering them alternative viewpoints or reasoning with facts can be a great way to positively influence their self-talk, thoughts, and emotions.
+  </p>
+
+  <h2>Goal Orientation's Influence (BONUS)</h2>
+  <p>
+    <strong>Task vs Ego-Orientation:</strong>  
+    Although goal orientations are not necessarily a mental skill, I do think they have a huge influence on mental aspects of sports. Understanding the difference between task and ego orientations has been huge in my growth as an athlete and coach and understanding these goal orientation's along with the motivational climates we create as coaches can be as important as any mental skill that we have discussed. Task orientation is sometimes known as mastery orientation and this orientation focuses on mastery of skills, task mastery and exerting maximal effort (Smoll & Smith, 2015). Ego orientation involves social comparisons, being better than others, and winning (Smoll & Smith, 2015). I feel strongly that ego orientation dooms athletes and coaches into negative demeanors, negative thoughts, and negative feelings and is incredibly bad for mental and emotional health.
+  </p>
+
+  <div class="references">
+    <h2>References</h2>
+    <p>
+      Bernier, M., Thienot, E., Codron, R., & Fournier, J. F. (2009). Mindfulness and acceptance approaches in sport performance. Journal of Clinical Sport Psychology, 3(4), 320–333. https://doi.org/10.1123/jcsp.3.4.320<br>
+      Buck, M. (2023, October 20). 20 mindfulness exercises for athletes. PurposeSoul Athletics. Retrieved July 12, 2025, from https://purposesoulathletics.com/20-mindfulness-exercises-for-athletes/<br>
+      Burton, D., & Raedeke, T. D. (2018). Self-talk. In Sport psychology for coaches (pp. 101–120). Human Kinetics.<br>
+      Etnier, J. L. (2017). Attention and cognitive skills. In D. L. Gill, L. Williams, & E. J. Reifsteck (Eds.), Psychological dynamics of sport and exercise (pp. 57–76). Human Kinetics. https://doi.org/10.5040/9781492595779.ch-005<br>
+      Jackson, P. (2021, June 15). How NBA coach Phil Jackson taught his teams mindfulness [Video]. YouTube. https://youtu.be/aqz7R-QalqY<br>
+      Isaya Tennis Academy. (2024, December 29). Focus in Tennis: Mastering mental concentration for peak performance. Isaya Tennis. Retrieved July 12, 2025, from https://isayatennis.com/tennis-focus<br>
+      Gill, D. L., Williams, L., & Reifsteck, E. J. (2017). Emotions and performance. In D. L. Gill, L. Williams, & E. J. Reifsteck (Eds.), Psychological dynamics of sport and exercise (pp. 155–170). Human Kinetics. https://doi.org/10.5040/9781492595779.ch-011<br>
+      Krane, V., & Williams, J. M. (2015). Psychological characteristics of peak performance. In J. M. Williams & V. Krane (Eds.), Applied sport psychology: Personal growth to peak performance (7th ed., pp. 153–168). McGraw-Hill Education.<br>
+      Smoll, F. L., & Smith, R. E. (2015). Conducting evidence‑based coach‑training programs: A social‑cognitive approach. In J. M. Williams & V. Krane (Eds.), Applied sport psychology: Personal growth to peak performance (7th ed.). McGraw‑Hill Education.<br>
+      Sterrett, J., & Jansen, J. (2015). Leadership in sports: The critical importance of coach and athlete leadership. In J. M. Williams & V. Krane (Eds.), Applied sport psychology: Personal growth to peak performance (7th ed., pp. 106–131). McGraw-Hill Education.<br>
+      Williams, J. M., Zinsser, N., & Bunker, L. (2015). Cognitive techniques for build
