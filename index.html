@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -250,7 +250,7 @@
     }
 
     @media (max-width: 600px) {
-      /* Logo top + nav grid 2x2 */
+      /* Logo top + nav centered */
       header {
         flex-direction: column;
         align-items: center;
@@ -261,8 +261,9 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
         margin-top: 1rem;
-        width: 80%;
-        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center; /* CENTER nav items horizontally */
       }
 
       nav a {
@@ -271,7 +272,7 @@
         padding: 0.6rem 0;
       }
 
-      /* Hero images: 2x2 grid */
+      /* Hero images 2x2 */
       .hero-images {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 150px);
@@ -410,8 +411,6 @@
     </ul>
   </div>
 </div>
-
-<!-- Video, Gallery, and Contact sections can follow here -->
 
 </body>
 </html>
