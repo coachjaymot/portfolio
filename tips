@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Tips | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO / HEADER ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= TIP CARDS ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .tip-card h3 {
+      padding: 1rem;
+      font-size: 1.3rem;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <h1>Sports Tips & Guidance</h1>
+  <p>Explore key insights, strategies, and resources to elevate athletic performance, leadership, and team success. Click on any category below to dive deeper.</p>
+</section>
+
+<!-- TIP CARDS GRID -->
+<div class="tips-grid">
+  <a href="blueprint.html" class="tip-card">
+    <img src="wooden.jpg" alt="Locker Room Blueprint">
+    <h3>Locker Room Blueprint for Success</h3>
+    <li>A collection of attributes from my experiences that are essential for success in sports. In essence, this is my own version of the Pyramid of Success.</li>
+  </a>
+
+  <a href="Regulating emotions.html" class="tip-card">
+    <img src="emotions.webp" alt="Nutrition Tips">
+    <h3>Regulating Emotions</h3>
+    <li>A few strategies for athletes and coaches to regulate their emotions.</li>
+  </a>
+
+  <a href="Imagery.html" class="tip-card">
+    <img src="imagery2.jpg" alt="Training Tips">
+    <h3>Sample Imagery Script</h3>
+    <li>Imagery can be a great way to create and rehearse a sports experience in one's mind building on a person's senses.</li>
+  </a>
+
+  <a href="4skills.html" class="tip-card">
+    <img src="Mental-skills.webp" alt="Mindset Tips">
+    <h3>4 Important Mental Skills for Success</h3>
+    <li>4 Mental Skills that can help lead to success.</li>
+  </a>
+</div>
+
+
+</body>
+</html>
