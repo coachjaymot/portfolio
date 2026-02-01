@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Jaymot | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 85vh;
+      background: linear-gradient(135deg, #0f1220, #1a1f36);
+    }
+
+    /* Image grid takes ~65-75% of hero width */
+    .hero-images {
+      flex: 0 0 65%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 0.5rem;
+      padding: 0.5rem;
+      min-height: 85vh;
+    }
+
+    .hero-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Hero text takes 25-35% of width */
+    .hero-content {
+      flex: 0 0 25%;
+      padding: 5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 250px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.8rem, 4vw, 4rem);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 1.2rem;
+    }
+
+    .link {
+      color: #a78bfa;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ================= NARRATIVE ================= */
+    .writing {
+      max-width: 800px;
+      margin: 4rem auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ================= INFO GRID ================= */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 0 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .info-box {
+      background: #11162a;
+      padding: 2rem;
+      border-radius: 16px;
+    }
+
+    .info-box h2 {
+      text-align: center; /* center titles */
+      margin-bottom: 1rem;
+    }
+
+    .info-box ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .info-box li {
+      margin-bottom: 0.6rem;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ================= VIDEO ================= */
+    iframe {
+      display: block;
+      margin: 4rem auto;
+      width: 560px;
+      max-width: 90%;
+      height: 315px;
+      border-radius: 16px;
+    }
+
+    /* ================= GALLERY ================= */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 3rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    /* ================= CONTACT ================= */
+    form {
+      background: #11162a;
+      padding: 2.5rem;
+      border-radius: 18px;
+      max-width: 500px;
+      margin: 4rem auto;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+
+    form input {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1.2rem;
+      border-radius: 6px;
+      border: none;
+    }
+
+    form button {
+      background: #5b2be0;
+      color: white;
+      font-weight: bold;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #6d3df2;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 1200px) {
+      .hero-content {
+        flex: 0 0 40%;
+      }
+
+      .hero-images {
+        flex: 0 0 60%;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        width: 100%;
+        min-height: auto;
+      }
+
+      .hero-content {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 3rem 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-images {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 150px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-images">
+    <img src="banquet.JPEG" alt="Hero Image 1">
+    <img src="homage.JPEG" alt="Hero Image 2">
+    <img src="Polaroid.jpg" alt="Hero Image 3">
+    <img src="bigchair.JPEG" alt="Hero Image 4">
+    <img src="kbbq.JPEG" alt="Hero Image 5">
+    <img src="flyingbackhand.JPEG" alt="Hero Image 6">
+  </div>
+
+  <div class="hero-content">
+    <h1>Hi, my name is Jeffrey Jaymot</h1>
+    <p>
+      Welcome to my portfolio site! I am a multidisciplinary professional specializing in Kinesiology, Ed Tech, Computer Information Systems & Business Analytics. Most of my spare time goes towards my studies as I am an EdD Kinesiology candidate and MBA Business Analytics student. Follow along my journey as a lifelong learner!  
+    </p>
+    <a class="link" href="https://www.linkedin.com/in/jeffrey-jaymot-8a4b0ab1/" target="_blank">
+      Connect on LinkedIn →
+    </a>
+  </div>
+</section>
+
+<div class="writing">
+  <p>
+    This portfolio displays my journey as a lifelong learner with various interests. Education, Technology, Health, Sports and Exercise have been pillars in my life and you will see the impact that these have had on me throughout this portfolio.  
+  </p>
+</div>
+
+<div class="info-grid">
+
+  <div class="info-box">
+    <h2>Educational Background</h2>
+    <ul>
+      <li>Ed.D. in Kinesiology (A.B.D.) – UNCG, Anticipated Summer 2027</li>
+      <li>M.B.A. in Business Analytics Management - Fitchburg State, Anticipated Fall 2026</li>
+      <li>M.S. in Educational Technology - CSU East Bay</li>
+      <li>M.A. in Kinesiology: Sports Management - Saint Mary's College of California</li>
+      <li>B.S. in Kinesiology - Sacramento State University</li>
+      <li>A.S. Computer Information Systems - Diablo Valley College</li>
+      <li>A.S. Natural Science - Diablo Valley College</li>
+      <li>A.S. Health Education - Diablo Valley College</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Computer Aided Design & Digital Media Certificate - Diablo Valley College</li>
+      <li>Computer Information Systems Project Management Certificate - Diablo Valley College</li>
+      <li>Computer Information Systems Database Management Certificate - Diablo Valley College</li>
+      <li>Microsoft Suite Core - Diablo Valley College</li>
+      <li>Web Graphics Certificate- Diablo Valley College</li>
+      <li>Personal Training Prep Course Certificate- Contra Costa College</li>
+      <li>Fundamentals of Coaching - NFHS</li>
+      <li>Ergonomics Compliance Training - American Safety Council</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h2>Awards</h2>
+    <ul>
+      <li>North Coast Section Girls' Tennis Honor Coach Award, 2022</li>
+      <li>USTA Hispanic Outreach Grant, 2017</li>
+      <li>International Tennis Association Junior College Assistant Coach of the Year (Region I), 2015</li>
+      <li>2x Saint Mary's Graduate Kinesiology Scholarship, 2014–2015</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h2>Current Work</h2>
+    <ul>
+      <li>Dissertation Topic – Redlining Physical Activity: Facilitators and Barriers to Physical Activity in Marginalized Communities</li>
+      <li>EdD Kinesiology Candidate – UNCG</li>
+      <li>MBA in Business Analytics Management - Fitchburg State</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Add your video, gallery, and contact sections here -->
+
+</body>
+</html>
