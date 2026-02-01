@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Jaymot | Skill Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    h2 {
+      color: #a78bfa;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #5b2be0;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 6px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= SKILLS GRID (UNCHANGED) ================= */
+    .skills-grid {
+      max-width: 1400px; 
+      margin: 2.5rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 32px;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    .section {
+      background: #11162a;
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      border: 1px solid rgba(167,139,250,0.45);
+      filter:
+        drop-shadow(0 0 6px rgba(167,139,250,0.35))
+        drop-shadow(0 0 14px rgba(91,43,224,0.25));
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+
+    /* ================= GALLERY SECTION (NEW) ================= */
+    .gallery-wrapper {
+      max-width: 1400px;
+      margin: 4rem auto 5rem;
+      padding: 0 1rem;
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #a78bfa;
+      margin-bottom: 2rem;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid rgba(167,139,250,0.45);
+      filter:
+        drop-shadow(0 0 6px rgba(167,139,250,0.3))
+        drop-shadow(0 0 14px rgba(91,43,224,0.25));
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 1200px) {
+      .project-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header, nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 0.8rem;
+      }
+
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html" class="active">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ================= SKILLS (UNCHANGED) ================= -->
+<div class="skills-grid">
+
+  <div class="section">
+    <h2>Professional Skills</h2>
+    <ul>
+      <li>Coaching & Athlete Development</li>
+      <li>Sports Management</li>
+      <li>Program Design & Implementation</li>
+      <li>Team Leadership & Mentorship</li>
+      <li>Curriculum Development</li>
+      <li>Project Management</li>
+      <li>Grant Writing</li>
+      <li>Facilities Management</li>
+      <li>Operations Management</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Data Analysis & Visualization (Excel, Tableau, ARCGIS)</li>
+      <li>Research Design & Thematic Analysis (ATLAS.ti)</li>
+      <li>Survey Development & Data Collection (Qualtrics, Survey Monkey, Google Forms)</li>
+      <li>Video & Photo Editing (Adobe Photoshop, Adobe Premier, Camstasia, iMovie, YouTube Studio)</li>
+      <li>Statistical Methods (IBM SPSS)</li>
+      <li>Database Management (MySQL, SQL)</li>
+      <li>Webiste Design - UX/UI</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Software / Programs</h2>
+    <ul>
+      <li>Microsoft Office Suite (Word, Excel, PowerPoint, Teams, Access, Outlook)</li>
+      <li>Adobe Creative Suite (Photoshop, Premier)</li>
+      <li>Google Workspace (Docs, Sheets, Slides, Forms, Sites)</li>
+      <li>Computer Aided Design / Digital Media Tools (AutoCAD, SketchUp, TinkerCAD)</li>
+      <li>Operating Systems (macOS, Windows)</li>
+      <li>Geographic Information Systems (ARCGIS)</li>
+      <li>Learning Management Systems (Blackboard, Canvas)</li>
+      <li>E-ticketing Platforms (GoFan)</li>
+      <li>Facilities Management (Facilitron)</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ================= GALLERY ================= -->
+<div class="gallery-wrapper">
+  <div class="gallery-title">Past Projects</div>
+
+  <div class="project-gallery">
+    <img src="cadillachouse1.png" alt="Project 1">
+    <img src="cadillachouse2.png" alt="Project 2">
+    <img src="structure.png" alt="Project 3">
+    <img src="structure2.png" alt="Project 4">
+    <img src="floorplana.png" alt="Project 5">
+    <img src="floorplanb.png" alt="Project 6">
+    <img src="swivelbase.png" alt="Project 7">
+    <img src="jeffwalker.JPEG" alt="Project 8">
+    <img src="PEsite.png" alt="Project 9">
+  </div>
+</div>
+
+</body>
+</html>
