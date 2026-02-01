@@ -81,7 +81,7 @@
       color: white;
     }
 
-    /* ================= SKILLS GRID (UNCHANGED) ================= */
+    /* ================= SKILLS GRID ================= */
     .skills-grid {
       max-width: 1400px; 
       margin: 2.5rem auto;
@@ -103,7 +103,7 @@
       box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
-    /* ================= GALLERY SECTION (NEW) ================= */
+    /* ================= GALLERY SECTION ================= */
     .gallery-wrapper {
       max-width: 1400px;
       margin: 4rem auto 5rem;
@@ -142,20 +142,46 @@
       }
     }
 
-    @media (max-width: 768px) {
-      header, nav ul {
+    /* ================= MOBILE NAVBAR 3-PER-ROW ================= */
+    @media (max-width: 600px) {
+      header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
         gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
       }
 
+      nav a {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 0;
+        text-align: center;
+      }
+    }
+
+    /* ================= FALLBACK 2-PER-ROW FOR EXTRA SMALL SCREENS ================= */
+    @media (max-width: 400px) {
+      nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+      }
+    }
+
+    /* ================= MOBILE PROJECT GALLERY ================= */
+    @media (max-width: 768px) {
       .project-gallery {
         grid-template-columns: 1fr;
       }
     }
+
   </style>
 </head>
 
@@ -175,7 +201,7 @@
   </nav>
 </header>
 
-<!-- ================= SKILLS (UNCHANGED) ================= -->
+<!-- ================= SKILLS ================= -->
 <div class="skills-grid">
 
   <div class="section">
