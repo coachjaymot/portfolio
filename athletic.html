@@ -21,9 +21,7 @@
       line-height: 1.6;
     }
 
-    h1, h2 {
-      color: #ffffff;
-    }
+    h1, h2 { color: #ffffff; }
 
     h1 {
       font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -54,11 +52,7 @@
       flex-wrap: wrap;
     }
 
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #fff;
-    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
 
     nav ul {
       list-style: none;
@@ -78,10 +72,7 @@
     }
 
     nav a:hover,
-    nav a.active {
-      background: #5b2be0;
-      color: white;
-    }
+    nav a.active { background: #5b2be0; color: white; }
 
     /* ================= SECTIONS ================= */
     .section {
@@ -91,32 +82,32 @@
       padding: 2.5rem 3rem;
       border-radius: 16px;
       border: 1px solid rgba(167,139,250,0.45);
-      filter:
-        drop-shadow(0 0 10px rgba(167,139,250,0.35))
-        drop-shadow(0 0 20px rgba(91,43,224,0.25));
+      filter: drop-shadow(0 0 10px rgba(167,139,250,0.35)) drop-shadow(0 0 20px rgba(91,43,224,0.25));
       box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
 
     /* Diablo Valley College photo row */
     .athletic-row {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 15px;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 10px;
       margin-top: 1rem;
       margin-bottom: 1rem;
-      flex-wrap: wrap;
     }
 
     .athletic-row img {
       border-radius: 12px;
-      height: auto;
-      max-width: 33%;
-      display: block;
       object-fit: cover;
+      height: auto;
     }
 
-    /* Pinole Valley photo (controlled size) */
+    /* Set desktop flex widths for three images across */
+    .athletic-row img:nth-child(1) { flex: 0.9; max-height: 280px; }
+    .athletic-row img:nth-child(2) { flex: 1.4; max-height: 280px; }
+    .athletic-row img:nth-child(3) { flex: 0.9; max-height: 280px; }
+
+    /* Pinole Valley photo */
     .pinole-photo {
       display: flex;
       justify-content: center;
@@ -124,7 +115,7 @@
     }
 
     .pinole-photo img {
-      width: 380px;
+      width: 320px;
       max-width: 90%;
       height: auto;
       border-radius: 14px;
@@ -155,15 +146,16 @@
         padding: 0.6rem 0;
       }
 
-      /* Photo rows stack vertically */
+      /* Mobile: stack DVC photos vertically */
       .athletic-row {
         flex-direction: column;
-        gap: 0.5rem;
         align-items: center;
       }
 
       .athletic-row img {
-        max-width: 90%;
+        width: 90%;
+        height: auto;
+        margin-bottom: 10px;
       }
 
       .pinole-photo img {
@@ -172,11 +164,9 @@
     }
 
     @media (max-width: 400px) {
-      nav ul {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 300px;
-      }
+      nav ul { grid-template-columns: repeat(2, 1fr); max-width: 300px; }
     }
+
   </style>
 </head>
 
@@ -242,6 +232,5 @@
 
 </body>
 </html>
-
 
 
