@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* ================= GLOBAL STYLES (MATCHED) ================= */
     * { box-sizing: border-box; margin:0; padding:0; font-family:'Inter', sans-serif; }
 
     body {
@@ -15,37 +16,45 @@
       line-height: 1.6;
     }
 
-    /* ================= HEADER / NAV ================= */
+    /* ================= HEADER / NAV (EXACT MATCH) ================= */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 1.5rem 3rem; /* Matched to Home */
       background: #0b0d18;
+      flex-wrap: wrap;
       position: sticky;
-      top:0;
-      z-index:100;
+      top: 0;
+      z-index: 100;
     }
 
-    .logo { font-size: 1.4rem; font-weight: 800; }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
 
     nav ul {
-      list-style:none;
-      display:flex;
-      gap:1.2rem;
+      list-style: none;
+      display: flex;
+      gap: 1.5rem; /* Matched to Home */
+      flex-wrap: wrap;
     }
 
     nav a {
-      text-decoration:none;
+      text-decoration: none;
       color: rgba(255,255,255,0.8);
-      font-weight:600;
-      padding:0.4rem 0.8rem;
-      border-radius:6px;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      text-align: center;
     }
 
-    nav a:hover, nav a.active {
-      background:#5b2be0;
-      color:white;
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
     }
 
     /* ================= CONTAINER ================= */
@@ -55,13 +64,13 @@
       padding: 0 2rem;
     }
 
+    /* ================= TOP BOX (STYLIZED) ================= */
     .top-box {
-      background: #1a2238; /* A slightly darker, richer blue */
+      background: #1a2238; 
       padding: 2.5rem;
       border-radius: 16px;
-      /* Subtle blue glowing shadow for a professional outline effect */
-      box-shadow: 0 0 0 2px rgba(94, 127, 236, 0.5), /* Inner outline */
-                  0 10px 30px rgba(0,0,0,0.3); /* Existing drop shadow */
+      box-shadow: 0 0 0 2px rgba(94, 127, 236, 0.5), 
+                  0 10px 30px rgba(0,0,0,0.3);
       margin-bottom: 2rem;
     }
     .top-box h1 { font-size: 2.2rem; margin-bottom: 1.5rem; text-align: center; color: #fff; }
@@ -70,7 +79,6 @@
     /* ================= GRID CHART SYSTEM ================= */
     .blueprint-grid {
       display: grid;
-      /* Column 1: Domain | Column 2: Attribute | Column 3: Definition */
       grid-template-columns: 200px 220px 1fr;
       gap: 10px;
       background: #11162a;
@@ -86,7 +94,6 @@
       align-items: center;
     }
 
-    /* Domain Styling (The Solid Side Box) */
     .domain-block {
       grid-column: 1;
       font-weight: 800;
@@ -97,7 +104,7 @@
       letter-spacing: 1px;
       line-height: 1.3;
       position: sticky;
-      top: 80px; /* Sticks the domain title as you scroll long definitions */
+      top: 100px; 
       height: auto;
       align-self: stretch;
     }
@@ -114,43 +121,46 @@
       background: rgba(255,255,255,0.02);
     }
 
-    /* Color Domains */
-    /* Mental: Reds */
+    /* Color Logic */
     .mental-bg { background: #e63946; color: white; }
     .mental-row { background: #f1faee10; border-left: 4px solid #e63946; }
 
-    /* Character: Purples */
     .character-bg { background: #7209b7; color: white; }
     .character-row { background: #7209b715; border-left: 4px solid #7209b7; }
 
-    /* Physical: Greens */
     .physical-bg { background: #38b000; color: white; }
     .physical-row { background: #38b00015; border-left: 4px solid #38b000; }
 
-    /* Community: Oranges/Peaches */
     .community-bg { background: #fb8500; color: white; }
     .community-row { background: #fb850015; border-left: 4px solid #fb8500; }
 
-    /* Process: Blues */
     .process-bg { background: #4361ee; color: white; }
     .process-row { background: #4361ee15; border-left: 4px solid #4361ee; }
 
-    /* Responsive */
+    /* ================= RESPONSIVE (MATCHED) ================= */
     @media (max-width: 900px) {
-      .blueprint-grid {
-        grid-template-columns: 1fr;
+      .blueprint-grid { grid-template-columns: 1fr; }
+      .domain-block { grid-row: auto !important; position: static; margin-top: 2rem; }
+      .attribute-cell, .definition-cell { grid-column: 1; }
+      header { padding: 1rem 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: center; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
       }
-      .domain-block {
-        grid-row: auto !important;
-        position: static;
-        margin-top: 2rem;
-      }
-      .attribute-cell, .definition-cell {
-        grid-column: 1;
-      }
+      nav a { display: block; width: 100%; padding: 0.6rem 0; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -162,7 +172,7 @@
       <li><a href="skills.html">Skill Portfolio</a></li>
       <li><a href="coaching.html">Coaching Career</a></li>
       <li><a href="athletic.html">Athletic Career</a></li>
-      <li><a href="tips.html">Sports Tips</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
     </ul>
   </nav>
 </header>
@@ -304,5 +314,8 @@
     <div class="cell attribute-cell process-row">Reflection</div>
     <div class="cell definition-cell process-row">The ability to look back on what has been done and think critically about what worked well and what has room for improvement and what adaptations or adjustments can be made to make something better.</div>
 
-  </div> </div> </body>
+  </div> 
+</div> 
+
+</body>
 </html>
