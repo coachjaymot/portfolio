@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeffrey Jaymot | Coaching Career</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #5b2be0;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      color: #a78bfa;
+    }
+
+    h4 {
+      margin: 0.5rem 0 0.2rem 0;
+      color: #a78bfa;
+    }
+
+    p, li {
+      color: rgba(255,255,255,0.85);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .role {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .role ul {
+      margin-top: 5px;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= SECTIONS WITH GLOW ================= */
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      background: #11162a;
+      padding: 2.5rem 3rem;
+      border-radius: 16px;
+
+      /* crisp border */
+      border: 1px solid rgba(167,139,250,0.45);
+
+      /* outward-only glow */
+      filter:
+        drop-shadow(0 0 8px rgba(167,139,250,0.35))
+        drop-shadow(0 0 22px rgba(91,43,224,0.25));
+
+      /* depth */
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+
+    /* Photo grids */
+    .photo-grid {
+      display: grid;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Richmond Tennis photos side by side + taller */
+    .ncs-photo {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ncs-photo img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Diablo Valley College photos remain original size */
+    .dvc {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dvc img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Media Section */
+    .media-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .media-grid.three-columns {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .media-item {
+      background: #1b1f38;
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .media-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .media-item p a {
+      color: #5b2be0;
+      text-decoration: none;
+    }
+
+    .media-item p a:hover {
+      text-decoration: underline;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header, nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul { gap: 0.8rem; }
+      .photo-grid, .media-grid.three-columns {
+        grid-template-columns: 1fr !important;
+      }
+      .ncs-photo img, .dvc img {
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html" class="active">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Private Programs -->
+<div class="section">
+  <h2>Private Programs</h2>
+  <div class="role">Crouching Tiger Tennis (2025-Current)</div>
+  <ul>
+    <li>10U Orange Ball - East Bay/Tri Valley Fall Champions (2025)</li>
+  </ul>
+</div>
+
+<!-- Richmond High School -->
+<div class="section">
+  <h2>Richmond High School</h2>
+
+  <h3>Media Highlights</h3>
+  <div class="media-grid three-columns">
+    <div class="media-item">
+      <img src="coachinghoop.jpg" alt="Oilers Girls Basketball">
+      <h4>Oilers Girls Varsity Basketball Wins Fifth Straight</h4>
+      <p><a href="https://ccpulse.org/2023/12/14/oilers-girls-varsity-basketball-wins-fifth-straight/" target="_blank">Read the article</a></p>
+    </div>
+    <div class="media-item">
+      <img src="curry1.jpg" alt="Steph Curry Event">
+      <h4>Richmond High Students at Steph Curry Party</h4>
+      <p><a href="https://richmondstandard.com/sports/2019/01/05/richmond-high-students-get-special-treatment-at-steph-curry-party/" target="_blank">Read the article</a></p>
+    </div>
+    <div class="media-item">
+      <img src="richmondtable.jpg" alt="Richmond Athletics">
+      <h4>Richmond High Athletics Down But Not Out</h4>
+      <p><a href="https://ccpulse.org/2023/03/20/richmond-high-athletics-down-but-not-out/" target="_blank">Read the article</a></p>
+    </div>
+  </div>
+
+  <div class="role">Varsity Girls Basketball Coach (2015-2024)</div>
+  <ul>
+    <li>TCAL Regular Season Co-Champions (2024)</li>
+    <li>TCAL League Playoff Runner-Up (2024)</li>
+    <li>TCAL Regular Season Runner-Up (2023)</li>
+    <li>TCAL League Playoff Runner-Up (2023)</li>
+    <li>NCS Playoff Participant – No. 15 Seed (2020)</li>
+    <li>Semifinalist in TCAL league playoffs (2020)</li>
+  </ul>
+
+  <div class="role">Varsity Boys Basketball Coach (2021-2022)</div>
+  <ul>
+    <li>11–8 record (2022); first and only winning season since 2006</li>
+  </ul>
+
+  <div class="role">Varsity Boys & Girls Tennis Coach (2016-2023)</div>
+  <ul>
+    <li>Girls' TCAL Team Champions (2023), NCS Team Playoff Participant – No. 16 Seed (2023)</li>
+    <li>Girls' TCAL Team Runner-Up (2022)</li>
+    <li>Girls' TCAL Doubles Champions (2023, 2022)</li>
+    <li>Girls' TCAL Singles Champion (2023, 2019)</li>
+    <li>Boys' Tennis: TCAL Singles Champion (2023)</li>
+    <li>Boys' TCAL Team Runner-Up (2022)</li>
+    <li>Boys' TCAL Team Co-Champions (2019)</li>
+    <li>Boys' NCS Playoff Participant - No. 16 Seed (2019)</li>
+    <li>Boys' TCAL Doubles Champions (2022, 2019)</li>
+    <li> USTA Hispanic Outreach Grant Awarded (2017)</li>
+  </ul>
+
+  <div class="photo-grid ncs-photo">
+    <img src="ncs.JPEG" alt="Richmond Tennis Coaching">
+    <img src="tennischamp.JPEG" alt="Richmond Tennis Championship">
+  </div>
+
+  <div class="role">Varsity Boys & Girls Cross Country Coach (2018-2019)</div>
+
+  <div class="role">Athletic Director (2021-2023)</div>
+  <ul>
+    <li>Tri County Athletic League (Rock) Boys’ Soccer Team Champions, 2022</li>
+    <li>North Coast Section Division II Boys’ Soccer Runner-Up, 2022</li>
+    <li>Lost 1-0 in North Coast Section Boys' finals by penalty shootout</li>
+    <li>Ranked No. 5 in North Coast Section and No. 2 in North Coast Section Division II</li>
+    <li>California Interscholastic Federation Division II State Regional Boys’ Soccer Quarterfinalist, 2022</li>
+    <li>Seeded No. 2 in Division II State Regional Bracket</li>
+    <li>Ranked #61 in California and #206 in the nation via MaxPreps</li>
+    <li>Tri County Athletic League (Stone) Girls’ Soccer Team Champions, 2022</li>
+  </ul>
+</div>
+
+<!-- Diablo Valley College -->
+<div class="section">
+  <h2>Diablo Valley College</h2>
+
+  <div class="role">Assistant Men's Tennis Coach (2013-2017)</div>
+  <ul>
+    <li>Big 8 Singles and Doubles Conference Champions (2016)</li>
+    <li>Men’s Tennis Ranked #3 in Northern California, #7 in State (2016)</li>
+    <li>Men’s Tennis Ranked #5 in Northern California, #15 in State (2015)</li>
+    <li>International Tennis Association Junior College Assistant Coach of the Year for Region I - CA (2015)</li>
+    <li>Men’s Tennis Ranked #7 in Northern California (2014)</li>
+  </ul>
+
+  <div class="role">Tennis Activity Instructor & Substitute (2015-2019)</div>
+
+  <div class="photo-grid dvc">
+    <img src="dvc1415.JPEG" alt="Diablo Valley College 1">
+    <img src="dvc1516.JPEG" alt="Diablo Valley College 2">
+  </div>
+
+  <h3>Media Highlights</h3>
+  <div class="media-grid three-columns">
+    <div class="media-item">
+      <img src="2015tennis.JPEG" alt="DVC Postseason 2014-15">
+      <h4>DVC Postseason 2014-15</h4>
+      <p><a href="https://dvcvikings.com/sports/mten/2014-15/releases/TEN_Postseason" target="_blank">Read the article</a></p>
+    </div>
+    <div class="media-item">
+      <img src="diablo valley college logo.jpg" alt="Vikings Defeat Bear Cubs 2016">
+      <h4>Vikings Defeat Bear Cubs</h4>
+      <p><a href="https://www.dvcinquirer.com/sports/2016/03/03/vikings-defeats-bear-cubs-for-first-time-in-six-years/" target="_blank">Read the article</a></p>
+    </div>
+    <div class="media-item">
+      <img src="dvc2.jpg" alt="Men's Tennis Final Home Match 2016">
+      <h4>Men's Tennis Final Home Match</h4>
+      <p><a href="https://www.dvcinquirer.com/sports/2016/03/27/mens-tennis-gets-no-love-in-final-home-match/" target="_blank">Read the article</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Pinole Valley High School -->
+<div class="section">
+  <h2>Pinole Valley High School</h2>
+  <div class="role">Varsity Boys & Girls Tennis Coach (2013-2016)</div>
+</div>
+
+<!-- Sutter Middle School -->
+<div class="section">
+  <h2>Sutter Middle School</h2>
+  <div class="role">7th Grade Volunteer Boys Assistant Coach (2011-2012)</div>
+</div>
+
+<!-- Grassroots AAU Programs -->
+<div class="section">
+  <h2>Grassroots AAU Programs</h2>
+  <div class="role">West Coco – Founder and Director (2022-Present)</div>
+  <div class="role">Richmond Tenacity – Founder and Director (2018-2019)</div>
+</div>
+
+</body>
+</html>
