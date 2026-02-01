@@ -52,6 +52,7 @@
       font-weight: 600;
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
+      text-align: center;
     }
 
     nav a:hover,
@@ -226,7 +227,6 @@
     }
 
     @media (max-width: 900px) {
-      /* Stack hero vertically */
       .hero {
         flex-direction: column;
       }
@@ -244,29 +244,65 @@
         padding: 3rem 2rem;
       }
 
-      /* Nav stack & spacing */
       header {
         padding: 1rem 1.5rem;
       }
+    }
+
+    @media (max-width: 600px) {
+      /* Logo top + nav grid 2x2 */
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
 
       nav ul {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
-        width: 100%;
+        margin-top: 1rem;
+        width: 80%;
+        text-align: center;
       }
 
       nav a {
         display: block;
         width: 100%;
-        text-align: center;
         padding: 0.6rem 0;
       }
 
-      /* Section padding & margins */
+      /* Hero images: 2x2 grid */
+      .hero-images {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 150px);
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      .hero-images img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* Hero content adjustments */
+      .hero-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .hero-content h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      /* Info grid stack */
       .info-grid {
-        padding: 0 1.5rem;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+        gap: 1rem;
       }
 
       .info-box {
@@ -276,40 +312,6 @@
       .writing {
         margin: 3rem 1rem;
         font-size: 1rem;
-      }
-
-      /* Hero font sizes */
-      .hero-content h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-      }
-
-      .hero-content p {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      /* Hero images single column */
-      .hero-images {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 150px);
-        gap: 0.4rem;
-      }
-
-      .hero-content {
-        padding: 2rem 1.5rem;
-      }
-
-      /* Info boxes stack naturally */
-      .info-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-        gap: 1rem;
-      }
-
-      /* Reduce hero vertical space */
-      .hero {
-        min-height: auto;
       }
     }
 
@@ -361,7 +363,6 @@
 </div>
 
 <div class="info-grid">
-
   <div class="info-box">
     <h2>Educational Background</h2>
     <ul>
@@ -408,10 +409,9 @@
       <li>MBA in Business Analytics Management - Fitchburg State</li>
     </ul>
   </div>
-
 </div>
 
-<!-- Placeholder for video, gallery, contact sections -->
+<!-- Video, Gallery, and Contact sections can follow here -->
 
 </body>
 </html>
