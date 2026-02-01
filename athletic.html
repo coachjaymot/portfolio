@@ -118,6 +118,21 @@
       object-fit: cover;
     }
 
+    /* Pinole Valley photo (controlled size) */
+    .pinole-photo {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .pinole-photo img {
+      width: 320px;          /* desktop size */
+      max-width: 90%;        /* mobile safety */
+      height: auto;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
     /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
       header, nav ul {
@@ -134,6 +149,12 @@
       .athletic-row img {
         width: 100% !important;
         height: auto !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .pinole-photo img {
+        width: 380px; /* slightly larger on tablets */
       }
     }
   </style>
@@ -169,7 +190,7 @@
 
   <!-- Athletic row: side images smaller, center larger -->
   <div class="athletic-row">
-    <img src="supersenior.JPEG" alt="ITA Tournament" style="flex:0.9; max-height:280px;">
+    <img src="DVCTEN11.jpeg" alt="ITA Tournament" style="flex:0.9; max-height:280px;">
     <img src="ojaiwin.JPEG" alt="Ojai Win" style="flex:1.4; max-height:280px;">
     <img src="lastmatch.JPEG" alt="Last Match" style="flex:0.9; max-height:280px;">
   </div>
@@ -181,21 +202,28 @@
 
   <ul>
     <li>Varsity Tennis (2007-2009)</li>
-   <li>Varsity Cross Country (2008-2009)
-    <ul>
-      <li>NCS Participant (2008-2009)</li>
-    </ul>
-  </li>
-   <li>Varsity Basketball (2008-2009)
-    <ul>
-      <li>NCS Basketball Participant (2008-2009), No. 5 Seeded Team in North Coast Section</li>
-      <li>NCS Quarterfinalist (2008-2009)</li>
-      <li>NCS Scholar Athlete (2008-2009)</li>
-    </ul>
-  </li>
-</ul>
+    <li>Varsity Cross Country (2008-2009)
+      <ul>
+        <li>NCS Participant (2008-2009)</li>
+      </ul>
+    </li>
+    <li>Varsity Basketball (2008-2009)
+      <ul>
+        <li>NCS Basketball Participant (2008-2009), No. 5 Seeded Team in North Coast Section</li>
+        <li>NCS Quarterfinalist (2008-2009)</li>
+        <li>NCS Scholar Athlete (2008-2009)</li>
+      </ul>
+    </li>
   </ul>
+
+  <!-- Pinole Valley Centered Photo -->
+  <div class="pinole-photo">
+    <img src="PVBBALL.jpeg" alt="Pinole Valley High School Athletics">
+  </div>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
