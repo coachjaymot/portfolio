@@ -38,6 +38,7 @@
     .logo {
       font-size: 1.4rem;
       font-weight: 800;
+      color: #fff;
     }
 
     nav ul {
@@ -45,6 +46,7 @@
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
+      margin: 0;
     }
 
     nav a {
@@ -53,6 +55,7 @@
       font-weight: 600;
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
+      transition: 0.2s;
     }
 
     nav a:hover,
@@ -96,6 +99,11 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.3);
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 1rem;
     }
 
     .tip-card:hover {
@@ -107,16 +115,55 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
+      border-radius: 12px 12px 0 0;
     }
 
     .tip-card h3 {
       padding: 1rem;
       font-size: 1.3rem;
       color: #ffffff;
-      text-align: center;
+    }
+
+    .tip-card li {
+      list-style: none;
+      padding: 0 1rem 1rem;
+      color: rgba(255,255,255,0.8);
     }
 
     /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      /* Mobile navbar: 3 per row */
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
+      }
+
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.6rem 0;
+      }
+    }
+
+    /* Extra small screens fallback to 2 per row */
+    @media (max-width: 400px) {
+      nav ul {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+      }
+    }
+
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2.2rem;
@@ -159,24 +206,24 @@
   </a>
 
   <a href="Regulating emotions.html" class="tip-card">
-    <img src="emotions.webp" alt="Nutrition Tips">
+    <img src="emotions.webp" alt="Regulating Emotions">
     <h3>Regulating Emotions</h3>
     <li>A few strategies for athletes and coaches to regulate their emotions.</li>
   </a>
 
   <a href="Imagery.html" class="tip-card">
-    <img src="imagery2.jpg" alt="Training Tips">
+    <img src="imagery2.jpg" alt="Sample Imagery Script">
     <h3>Sample Imagery Script</h3>
     <li>Imagery can be a great way to create and rehearse a sports experience in one's mind building on a person's senses.</li>
   </a>
 
   <a href="4skills.html" class="tip-card">
-    <img src="Mental-skills.webp" alt="Mindset Tips">
+    <img src="Mental-skills.webp" alt="4 Mental Skills">
     <h3>4 Important Mental Skills for Success</h3>
     <li>4 Mental Skills that can help lead to success.</li>
   </a>
 </div>
 
-
 </body>
 </html>
+
