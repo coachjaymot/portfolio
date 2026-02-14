@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aerobic vs Anaerobic | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= SECTIONS ================= */
+    .tips-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    /* ================= TIP BOXES ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .tip-card li {
+      list-style: disc;
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* ================= REFERENCE ================= */
+    .reference {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 1rem 2rem;
+      background: #11162a;
+      border-radius: 12px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .reference a {
+      color: #5b2be0;
+      text-decoration: underline;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">Jeffrey Jaymot</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional Experience</a></li>
+        <li><a href="skills.html">Skill Portfolio</a></li>
+        <li><a href="coaching.html">Coaching Career</a></li>
+        <li><a href="athletic.html">Athletic Career</a></li>
+        <li><a href="tips.html" class="active">Sports Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Aerobic vs Anaerobic Exercise</h1>
+      <p>
+        Learn the differences between aerobic ("with oxygen") and anaerobic ("without oxygen") exercise, including energy sources, duration, intensity, and benefits.
+      </p>
+    </section>
+
+    <!-- CARDS -->
+    <section class="tips-section">
+      <div class="tips-grid">
+        <!-- Aerobic -->
+        <div class="tip-card">
+          <h3>Aerobic Exercise</h3>
+          <li>Uses oxygen to generate energy over extended periods.</li>
+          <li>Moderate intensity, sustainable for 30+ minutes.</li>
+          <li>Examples: jogging, swimming, cycling, dance cardio.</li>
+          <li>Benefits: cardiovascular endurance, stamina, fat metabolism.</li>
+        </div>
+
+        <!-- Anaerobic -->
+        <div class="tip-card">
+          <h3>Anaerobic Exercise</h3>
+          <li>Relies on stored muscle glucose without oxygen.</li>
+          <li>High intensity, short bursts (seconds to a few minutes).</li>
+          <li>Examples: sprinting, weightlifting, HIIT, plyometrics.</li>
+          <li>Benefits: strength, power, muscle mass, explosive performance.</li>
+        </div>
+
+        <!-- Key Differences -->
+        <div class="tip-card">
+          <h3>Key Differences</h3>
+          <li>Aerobic: moderate intensity, sustained; uses oxygen.</li>
+          <li>Anaerobic: high intensity, short duration; uses stored energy.</li>
+          <li>Training focus: endurance vs strength/power.</li>
+          <li>Energy pathways: oxidative vs glycolytic/phosphagen systems.</li>
+        </div>
+
+        <!-- Why Both Matter -->
+        <div class="tip-card">
+          <h3>Why Both Matter</h3>
+          <li>Aerobic training boosts heart, lungs, and stamina.</li>
+          <li>Anaerobic training develops muscles, strength, and explosiveness.</li>
+          <li>Most workouts blend both; one system predominates depending on intensity.</li>
+          <li>Integrating both supports well-rounded athletic performance.</li>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCE -->
+    <section class="reference">
+      Reference: WebMD. <a href="https://www.webmd.com/fitness-exercise/difference-between-aerobic-and-anaerobic-exercise" target="_blank" rel="noopener noreferrer">
+        Difference Between Aerobic and Anaerobic Exercise
+      </a>.
+    </section>
+
+  </main>
+
+</body>
+</html>
