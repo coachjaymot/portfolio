@@ -9,174 +9,47 @@
 
   <style>
     /* ================= GLOBAL ================= */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: #0f1220;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
 
     /* ================= HEADER / NAV ================= */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 3rem;
-      background: #0b0d18;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #fff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: rgba(255,255,255,0.8);
-      font-weight: 600;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      transition: 0.2s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: #5b2be0;
-      color: white;
-    }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 3rem; background: #0b0d18; flex-wrap: wrap; }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.8); font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; transition: 0.2s; }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
 
     /* ================= HERO ================= */
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.8);
-      max-width: 800px;
-      margin: 0 auto;
-    }
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
 
     /* ================= SECTIONS ================= */
-    .tips-section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-
-    .tips-section h2 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-      text-align: center;
-    }
-
-    .section-intro {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      color: rgba(255,255,255,0.75);
-      font-size: 1rem;
-    }
+    .tips-section { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+    .tips-section h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+    .section-intro { text-align: center; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.75); font-size: 1rem; }
 
     /* ================= TIP CARDS ================= */
-    .tips-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .tip-card {
-      background: #11162a;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.8);
-    }
-
-    .tip-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
-    }
-
-    .tip-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: #ffffff;
-    }
-
-    .tip-card li {
-      list-style: disc;
-      padding-left: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .tip-card { background: #11162a; border-radius: 16px; padding: 1.5rem; box-shadow: 0 6px 12px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s; font-size: 1rem; color: rgba(255,255,255,0.8); }
+    .tip-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.5); }
+    .tip-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; color: #ffffff; }
+    .tip-card ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+    .tip-card li { margin-bottom: 0.5rem; }
 
     /* ================= IMAGE PLACEHOLDER ================= */
-    .image-placeholder {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      text-align: center;
-    }
-
-    .image-placeholder img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
+    .image-placeholder { max-width: 600px; margin: 0 auto 2rem; text-align: center; }
+    .image-placeholder img { width: 100%; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.3); }
 
     /* ================= REFERENCE ================= */
-    .reference {
-      max-width: 900px;
-      margin: 2rem auto 4rem;
-      padding: 1rem 2rem;
-      background: #11162a;
-      border-radius: 12px;
-      color: rgba(255,255,255,0.7);
-      font-size: 0.9rem;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    .reference a {
-      color: #5b2be0;
-      text-decoration: underline;
-    }
+    .reference { max-width: 900px; margin: 2rem auto 4rem; padding: 1rem 2rem; background: #11162a; border-radius: 12px; color: rgba(255,255,255,0.7); font-size: 0.9rem; text-align: center; line-height: 1.5; }
+    .reference a { color: #5b2be0; text-decoration: underline; }
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
     }
   </style>
 </head>
@@ -207,58 +80,72 @@
       <p>Learn how emotions and arousal affect performance and how athletes can find their personal optimal zone.</p>
     </section>
 
-    <!-- ================= IMAGE PLACEHOLDER ================= -->
+    <!-- IMAGE PLACEHOLDER -->
     <section class="tips-section">
       <div class="image-placeholder">
         <img src="izof1.png" alt="Inverted-U Diagram">
-        <p style="color: rgba(255,255,255,0.6); margin-top:0.5rem;"></p>
+        <p style="color: rgba(255,255,255,0.6); margin-top:0.5rem;">Inverted-U model illustration of IZOF.</p>
       </div>
     </section>
 
     <!-- TIP CARDS -->
     <section class="tips-section">
       <div class="tips-grid">
+
         <div class="tip-card">
           <h3>What is IZOF?</h3>
-          <li>IZOF stands for <strong>Individual Zones of Optimal Functioning</strong>.</li>
-          <li>It explains how emotional states and arousal levels influence performance.</li>
-          <li>Each athlete has a unique zone where they perform best, unlike universal models.</li>
+          <ul>
+            <li>IZOF stands for <strong>Individual Zones of Optimal Functioning</strong>.</li>
+            <li>It explains how emotional states and arousal levels influence performance.</li>
+            <li>Each athlete has a unique zone where they perform best, unlike universal models.</li>
+          </ul>
         </div>
 
         <div class="tip-card">
           <h3>Key Idea: Everyone is Different</h3>
-          <li>Some athletes excel when calm, others when energized or slightly anxious.</li>
-          <li>The optimal zone is personalized — it’s about what works for you.</li>
-          <li>Not all stress or excitement is harmful; some emotions can enhance performance.</li>
+          <ul>
+            <li>Some athletes excel when calm, others when energized or slightly anxious.</li>
+            <li>The optimal zone is personalized — it’s about what works for you.</li>
+            <li>Not all stress or excitement is harmful; some emotions can enhance performance.</li>
+          </ul>
         </div>
 
         <div class="tip-card">
           <h3>Emotion Profiling</h3>
-          <li>Reflect on past performances to identify helpful vs. unhelpful emotions.</li>
-          <li>Rate the intensity of emotions during peak and poor performances.</li>
-          <li>Create a personalized emotional map to know what state helps you perform best.</li>
+          <ul>
+            <li>Reflect on past performances to identify helpful vs. unhelpful emotions.</li>
+            <li>Rate the intensity of emotions during peak and poor performances.</li>
+            <li>Create a personalized emotional map to know what state helps you perform best.</li>
+          </ul>
         </div>
 
         <div class="tip-card">
           <h3>Why IZOF Matters</h3>
-          <li>Helps athletes identify their own best emotional state before competition.</li>
-          <li>Improves self-awareness and mental preparation strategies.</li>
-          <li>Supports both individual and team performance planning.</li>
+          <ul>
+            <li>Helps athletes identify their own best emotional state before competition.</li>
+            <li>Improves self-awareness and mental preparation strategies.</li>
+            <li>Supports both individual and team performance planning.</li>
+          </ul>
         </div>
 
         <div class="tip-card">
           <h3>Practical Applications</h3>
-          <li>Pre-game: plan strategies and prepare mentally for your optimal zone.</li>
-          <li>During training: track emotions that enhance or hinder skills.</li>
-          <li>Coaching: tailor guidance to the athlete’s individual emotional profile.</li>
+          <ul>
+            <li>Pre-game: plan strategies and prepare mentally for your optimal zone.</li>
+            <li>During training: track emotions that enhance or hinder skills.</li>
+            <li>Coaching: tailor guidance to the athlete’s individual emotional profile.</li>
+          </ul>
         </div>
 
         <div class="tip-card">
           <h3>Quick Summary</h3>
-          <li>IZOF is about finding your “sweet spot” of emotion and arousal.</li>
-          <li>Helps athletes maximize performance through personalized mental strategies.</li>
-          <li>Recognizes that one size doesn’t fit all — each athlete is unique.</li>
+          <ul>
+            <li>IZOF is about finding your “sweet spot” of emotion and arousal.</li>
+            <li>Helps athletes maximize performance through personalized mental strategies.</li>
+            <li>Recognizes that one size doesn’t fit all — each athlete is unique.</li>
+          </ul>
         </div>
+
       </div>
     </section>
 
