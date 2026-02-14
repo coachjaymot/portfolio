@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Step | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= CONTENT ================= */
+    .tips-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .content-box {
+      background: #11162a;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .content-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .content-box p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ================= BUTTON ================= */
+    .action-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #5b2be0;
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .action-button:hover {
+      background: #6f3ff5;
+      transform: translateY(-2px);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">Jeffrey Jaymot</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional Experience</a></li>
+        <li><a href="skills.html">Skill Portfolio</a></li>
+        <li><a href="coaching.html">Coaching Career</a></li>
+        <li><a href="athletic.html">Athletic Career</a></li>
+        <li><a href="tips.html" class="active">Sports Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <h1>Split Step</h1>
+    <p>
+ A well-timed split step places an athlete in an athletic position,
+        allowing for quicker and more efficient movement in any direction. What really is the split step though? Well a split step is quick jump or hop that allows us to land on both feet simultaneously. Essentially, it is a two-footed landing from a hop. Now many people simply correlate it with getting ready to strike a ball, but I like to go a step further with my players. In tennis, we often do not know where our opponent is going to hit the ball until they strike the ball and we make the read. As our opponent hits the ball, we should be split stepping and then as we recognize where this ball is going we are going to move towards the ball using that split step hop to our advantage. By having a two-foot landing we can move in either direction effectively without losing time. If a ball comes close to our body we can use the split step to our advantage by pivoting on whichever foot will allow us to get into the closed-stance and hit a solid ground stroke.
+    </p>
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+  <section class="tips-section">
+    <div class="content-box">
+      <img src="splitstep.webp" alt="Split Step Illustration">
+
+      <h3>Why the Split Step Matters</h3>
+      <p>
+      Check out this article by "Fault Tolerant Tennis" for a little more on the split step. 
+      </p>
+
+      <a href="https://faulttoleranttennis.com/the-split-step-why-when-and-how/" class="action-button">
+        Learn More About The Split Step
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
