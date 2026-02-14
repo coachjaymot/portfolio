@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast vs Slow Twitch Fibers | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= SECTIONS ================= */
+    .tips-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    /* ================= TIP BOXES ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .tip-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .tip-card li {
+      list-style: disc;
+      margin-bottom: 0.5rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 1rem; /* unified font size */
+    }
+
+    .tip-card p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ================= REFERENCE ================= */
+    .reference {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 1rem 2rem;
+      background: #11162a;
+      border-radius: 12px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .reference a {
+      color: #5b2be0;
+      text-decoration: underline;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">Jeffrey Jaymot</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional Experience</a></li>
+        <li><a href="skills.html">Skill Portfolio</a></li>
+        <li><a href="coaching.html">Coaching Career</a></li>
+        <li><a href="athletic.html">Athletic Career</a></li>
+        <li><a href="tips.html" class="active">Sports Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Fast vs Slow Twitch Muscle Fibers</h1>
+      <p>
+        Learn the difference between fast-twitch and slow-twitch muscle fibers in simple terms.
+      </p>
+    </section>
+
+    <!-- TIP CARDS -->
+    <section class="tips-section">
+      <div class="tips-grid">
+
+        <!-- Slow Twitch -->
+        <div class="tip-card">
+          <h3>Slow-Twitch Fibers (Endurance)</h3>
+          <ul>
+            <li>Built for long, steady activities.</li>
+            <li>Use oxygen to generate energy slowly but efficiently.</li>
+            <li>Good for jogging, cycling, walking, hiking.</li>
+            <li>Don't tire easily — keep going for a long time.</li>
+          </ul>
+        </div>
+
+        <!-- Fast Twitch -->
+        <div class="tip-card">
+          <h3>Fast-Twitch Fibers (Powerful Burst)</h3>
+          <ul>
+            <li>Built for short, powerful movements.</li>
+            <li>Use stored energy in muscles; less oxygen required.</li>
+            <li>Good for sprinting, lifting, jumping, HIIT.</li>
+            <li>Tire quickly — burn fuel fast.</li>
+          </ul>
+        </div>
+
+        <!-- Quick Comparison -->
+        <div class="tip-card">
+          <h3>Quick Comparison</h3>
+          <ul>
+            <li><strong>Slow-twitch:</strong> endurance, uses oxygen, long duration.</li>
+            <li><strong>Fast-twitch:</strong> strength & speed, short bursts, quick fatigue.</li>
+            <li>Slow = stamina, Fast = power.</li>
+            <li>Both types are needed for balanced performance.</li>
+          </ul>
+        </div>
+
+        <!-- Why Both Matter -->
+        <div class="tip-card">
+          <h3>Why Both Matter</h3>
+          <ul>
+            <li>Slow-twitch fibers keep you active longer and improve endurance.</li>
+            <li>Fast-twitch fibers give you strength, explosiveness, and speed.</li>
+            <li>Training both supports overall fitness and muscle health.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REFERENCE -->
+    <section class="reference">
+      Reference: Nebraska Medicine. (2025, February 24). <em>The difference between fast and slow twitch muscle fibers.</em> NebraskaMed.com. <a href="https://www.nebraskamed.com/health/healthy-lifestyle/orthopaedics/the-difference-between-fast-and-slow-twitch-muscle-fibers" target="_blank" rel="noopener noreferrer">https://www.nebraskamed.com/health/healthy-lifestyle/orthopaedics/the-difference-between-fast-and-slow-twitch-muscle-fibers</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
