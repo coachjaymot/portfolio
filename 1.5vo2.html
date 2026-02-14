@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.5 Mile VO2 Max Test | Jeffrey Jaymot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL STYLES (MATCHED) ================= */
+    * { box-sizing: border-box; margin:0; padding:0; font-family:'Inter', sans-serif; }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= CONTAINER ================= */
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    h1, h2 { text-align: center; margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+
+    p { color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem; }
+
+    .section { margin-bottom: 3rem; }
+
+    .formula {
+      background: #11162a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      color: #ffd700;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .example {
+      background: #11162a;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .references {
+      background: #11162a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 2rem 1rem; }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
+      }
+      nav a { display: block; width: 100%; padding: 0.6rem 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <section class="section">
+    <h1>1.5 Mile VO2 Max / Cooper Test</h1>
+    <p>
+      VO2 Max is the maximum volume of oxygen an individual can utilize during intense exercise (McArdle, Katch, & Katch, 2021). 
+      It is a key indicator of cardiovascular endurance and aerobic capacity. Higher VO2 max allows athletes to sustain higher intensities longer, improving performance in endurance and team sports (ACSM, 2021).
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>1.5 Mile Cooper Test Description</h2>
+    <p>
+      The 1.5 Mile Cooper Test is a field test designed to estimate VO2 Max through running. Participants run 1.5 miles (2.4 km) as quickly as possible, and the total time is recorded. 
+      This test is easy to administer, requires minimal equipment, and provides a reliable estimate of aerobic fitness (Cooper, 1968; Noonan & Dean, 2000).
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>VO2 Max Formula</h2>
+    <p>VO2 Max can be estimated using the following formula based on the 1.5 mile run time:</p>
+    <div class="formula">
+      VO2 Max (ml/kg/min) = 483 ÷ Time (minutes) + 3.5
+    </div>
+    <div class="example">
+      <strong>Example:</strong> An athlete completes 1.5 miles in 12 minutes:<br>
+      VO2 Max = 483 ÷ 12 + 3.5 = 43.25 ml/kg/min
+    </div>
+  </section>
+
+  <section class="section references">
+    <h2>References</h2>
+    <ul>
+      <li>American College of Sports Medicine (ACSM). (2021). <em>ACSM’s Guidelines for Exercise Testing and Prescription</em> (11th ed.). Philadelphia, PA: Wolters Kluwer.</li>
+      <li>Cooper, K. H. (1968). A means of assessing maximal oxygen intake. <em>JAMA, 203</em>(3), 201–204.</li>
+      <li>McArdle, W. D., Katch, F. I., & Katch, V. L. (2021). <em>Exercise Physiology: Nutrition, Energy, and Human Performance</em> (9th ed.). Philadelphia, PA: Wolters Kluwer.</li>
+      <li>Noonan, V., & Dean, E. (2000). Submaximal exercise testing: Clinical application and interpretation. <em>Physical Therapy, 80</em>(8), 782–807.</li>
+    </ul>
+  </section>
+</div>
+
+</body>
+</html>
