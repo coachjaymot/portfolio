@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Serve Development | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .ball-section {
+      background: #11162a;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .ball-section h3 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .ball-section ul { margin: 1rem 0 1.5rem 1.25rem; }
+    .ball-section li { margin-bottom: 0.5rem; }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .orange { border-left: 6px solid #f97316; }
+    .green  { border-left: 6px solid #22c55e; }
+    .yellow { border-left: 6px solid #eab308; }
+
+    .serve-type { margin-top: 2rem; }
+    .serve-type h4 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      iframe { height: 220px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Tennis Serve Development</h1>
+  <p>
+    A progressive approach to teaching the serve that aligns skill complexity,
+    confidence, and arousal regulation across development stages.
+  </p>
+</section>
+
+<section class="content-section">
+
+  <!-- ORANGE BALL -->
+  <div class="ball-section orange">
+    <h3>🟠 Orange Ball — Building the Foundation</h3>
+    <ul>
+      <li>Consistent and controllable toss</li>
+      <li>Smooth service motion</li>
+      <li>Confidence through repetition</li>
+    </ul>
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/i71VrCAbBQc"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/C7vjiSc4AA4"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- GREEN BALL -->
+  <div class="ball-section green">
+    <h3>🟢 Green Ball — Power With Control</h3>
+    <ul>
+      <li>Leg drive and trunk rotation</li>
+      <li>Directional intent</li>
+      <li>Match-like serving patterns</li>
+    </ul>
+
+    <div class="video-grid">
+      <iframe src="https://www.youtube.com/embed/cjKoDiWF0tQ"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+      <iframe src="https://www.youtube.com/embed/xpwZc-G2Gnc"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- YELLOW BALL -->
+  <div class="ball-section yellow">
+    <h3>🟡 Yellow Ball — Advanced Serve Types</h3>
+
+    <div class="serve-type">
+      <h4>Flat Serve</h4>
+      <ul>
+        <li>Maximum velocity</li>
+        <li>Aggressive first-serve option</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/bnSf8XjTMuU"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="serve-type">
+      <h4>Slice Serve</h4>
+      <ul>
+        <li>Horizontal movement</li>
+        <li>Creates court angles</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/JhDuIWaDvgM"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="serve-type">
+      <h4>Topspin (Kick) Serve</h4>
+      <ul>
+        <li>High net clearance</li>
+        <li>Reliable under pressure</li>
+      </ul>
+      <iframe src="https://www.youtube.com/embed/yMgmH3xDfCU"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
