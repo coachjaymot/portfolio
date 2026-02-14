@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motivational Climate | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    /* ================= CONTENT ================= */
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.9);
+    }
+
+    /* ================= IMAGE ================= */
+    .image-placeholder {
+      width: 100%;
+      height: 320px;
+      margin: 3rem 0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a1f3c, #0f1220);
+    }
+
+    .image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      nav ul {
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">Jeffrey Jaymot</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional Experience</a></li>
+        <li><a href="skills.html">Skill Portfolio</a></li>
+        <li><a href="coaching.html">Coaching Career</a></li>
+        <li><a href="athletic.html">Athletic Career</a></li>
+        <li><a href="tips.html">Sports Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Motivational Climate</h1>
+      <p>
+        Coaches have the ability to shape the motivational climate of their programs.
+        This climate influences how athletes define success, respond to failure,
+        and sustain motivation over time.
+      </p>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content">
+
+      <h2>What Is Motivational Climate?</h2>
+      <p>
+        Motivational climate refers to the environment created by leaders, coaches,
+        and teammates that shapes how individuals perceive success and why they engage
+        in sport or performance settings.
+      </p>
+
+      <p>
+        It is communicated through feedback, expectations, rewards, and daily interactions.
+        Over time, motivational climate strongly influences effort, persistence,
+        confidence, and long-term engagement.
+      </p>
+
+      <!-- IMAGE -->
+      <div class="image-placeholder">
+        <img src="ego.png" alt="Motivational Climate in Practice">
+      </div>
+
+      <h2>Ego-Oriented Climate</h2>
+      <p>
+        An ego-oriented climate emphasizes comparison, winning, and outperforming others.
+        Success is often defined by results and rankings rather than improvement.
+        While this can produce short-term motivation, it may reduce resilience
+        and risk-taking over time.
+      </p>
+
+      <h2>Task-Oriented Climate</h2>
+      <p>
+        A task-oriented climate emphasizes effort, learning, improvement, and personal growth.
+        Athletes are encouraged to focus on mastery, preparation, and decision-making.
+        This approach supports confidence, adaptability, and sustained motivation.
+      </p>
+
+      <p>
+        When leaders consistently reinforce effort and learning, athletes become more
+        willing to embrace challenges and persist through setbacks. Over time,
+        a task-oriented climate creates stability even when outcomes fluctuate.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
