@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cohort Model | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f1220;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= SECTIONS ================= */
+    .tips-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    /* ================= CONTENT BOX ================= */
+    .content-box {
+      background: #11162a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      min-height: 150px; /* placeholder height */
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">Jeffrey Jaymot</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="professional.html">Professional Experience</a></li>
+        <li><a href="skills.html">Skill Portfolio</a></li>
+        <li><a href="coaching.html">Coaching Career</a></li>
+        <li><a href="athletic.html">Athletic Career</a></li>
+        <li><a href="tips.html" class="active">Sports Tips</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Cohort Model</h1>
+      <p>
+        The cohort model is a system where learners progress through a program together in groups.
+      </p>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="tips-section">
+      <h2>How does this relate to sports?</h2>
+      <div class="content-box">
+        <p>When I was first introduced to a cohort model it was in academia. The premise was that if students go through a curriculum together that they are more likely to succeed. How so? Well, many people have the habit of quitting in contemporary society. People face hardships. Everyone is built differently. By creating groups, we create systems of support. When a student feels like quitting or facing hardships, others in their cohort can offer support, empathy advice, guidance, or just a shoulder to lean on. More often than not, this results in people continuing on towards their goal because their village of support helped them through adversity. This same ideology can be applied to athletics. We are not just building teams, but good coaches build programs and I feel that creating cohorts is one of the best ways of doing that. If a coach can assemble a group of kids around the same age to play, learn, and develop together, chances are those kids will support one another throughout their development and become great athletes and teammates.</p>
+        <!-- Blank section for you to write in -->
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
