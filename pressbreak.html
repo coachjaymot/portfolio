@@ -3,87 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zone Press & Press Breaks | Jeffrey Jaymot</title>
+  <title>Press & Press Break | Jeffrey Jaymot</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-    }
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
 
-    body {
-      background: #f6f7fb;
-      color: #1a1a1a;
-      line-height: 1.6;
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; background: #0b0d18; flex-wrap: wrap;
     }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.8); font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; transition: 0.2s; }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
 
-    .page-header {
-      max-width: 1100px;
-      margin: 3rem auto 2rem;
-      padding: 0 1.25rem;
-    }
+    /* ================= HERO ================= */
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
 
-    .page-header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 0.75rem;
-    }
+    /* ================= SECTIONS ================= */
+    .tips-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+    .tips-section h2 { font-size: 2rem; margin-bottom: 0.75rem; text-align: center; }
+    .section-intro { text-align: center; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.75); font-size: 1rem; }
 
-    .page-header p {
-      max-width: 700px;
-      color: #555;
-      font-size: 1.05rem;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 3rem auto;
-      padding: 0 1.25rem;
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .card p {
-      color: #444;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-    }
-
-    .video-grid {
+    /* ================= TIP CARDS ================= */
+    .tips-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
+      justify-items: center;
     }
 
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 380px;
+      padding-bottom: 1rem;
+      text-align: center;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card h3 {
+      padding: 1rem;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+
+    .tip-card li {
+      list-style: none;
+      padding: 0 1rem 1rem;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+    }
+
+    /* ================= VIDEO EMBEDS ================= */
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      border-radius: 14px;
+      margin: 0 1rem;
+      border-radius: 12px;
     }
 
     .video-wrapper iframe {
@@ -94,70 +91,97 @@
       border: none;
     }
 
-    footer {
-      text-align: center;
-      padding: 3rem 1.25rem;
-      font-size: 0.9rem;
-      color: #777;
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+    }
+    @media (max-width: 400px) {
+      nav ul { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Page Header -->
-  <header class="page-header">
-    <h1>Zone Press & Press Breaks</h1>
-    <p>
-      Teaching tools and video breakdowns designed to help players understand
-      spacing, pressure, decision-making, and attacking defensive structures.
-    </p>
-  </header>
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Zone Press Section -->
-  <section class="section">
-    <h2>Zone Press</h2>
+<main>
 
-    <div class="card">
-      <h3>Zone Press Concepts & Teaching Points</h3>
-      <p>
-        These videos focus on positioning, trapping angles, rotations,
-        and how to apply pressure without gambling or overextending.
-      </p>
+<section class="hero">
+  <h1>Press & Press Break</h1>
+  <p>
+    Teaching spacing, pressure principles, and decision-making against full-court defenses.
+  </p>
+</section>
 
-      <div class="video-grid">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/C9RqjAxlmNk?start=1682"
-            title="Zone Press Teaching Video 1"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+<!-- ================= ZONE PRESS ================= -->
+<section class="tips-section">
+  <h2>Zone Press</h2>
+  <p class="section-intro">
+    Concepts, rotations, and teaching cues used to apply pressure without gambling or losing structure.
+  </p>
 
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/k0e7UZDV70I"
-            title="Zone Press Teaching Video 2"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
+  <div class="tips-grid">
+    <div class="tip-card">
+      <h3>Zone Press – Teaching Concepts</h3>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/C9RqjAxlmNk?start=1682"
+          title="Zone Press Concepts"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
+      <li>Positioning, trapping angles, and recovery responsibilities.</li>
     </div>
-  </section>
 
-  <!-- Press Break Section -->
-  <section class="section">
-    <h2>Press Break</h2>
+    <div class="tip-card">
+      <h3>Zone Press – Structure & Flow</h3>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/k0e7UZDV70I"
+          title="Zone Press Structure"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <li>How pressure works when all five players move on a string.</li>
+    </div>
+  </div>
+</section>
 
-    <div class="card">
+<!-- ================= PRESS BREAK ================= -->
+<section class="tips-section">
+  <h2>Press Break</h2>
+  <p class="section-intro">
+    Simple, repeatable solutions to create spacing, passing angles, and advantage versus pressure.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
       <h3>4 Across Press Break</h3>
-      <p>
-        A simple and effective press break designed to create spacing,
-        quick ball reversals, and clear decision-making against full-court pressure.
-      </p>
-
       <div class="video-wrapper">
         <iframe
           src="https://www.youtube.com/embed/DyaOAWpyLF0"
@@ -166,13 +190,12 @@
           allowfullscreen>
         </iframe>
       </div>
+      <li>Quick reversal, middle flash, and attacking the second line of defense.</li>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    © 2026 Jeffrey Jaymot · Coaching Resources
-  </footer>
+</main>
 
 </body>
 </html>
