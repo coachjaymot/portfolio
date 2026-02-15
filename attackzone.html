@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odd vs Even Man Front Zones | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; background: #0b0d18; flex-wrap: wrap;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.8); font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; transition: 0.2s; }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
+
+    /* ================= HERO ================= */
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
+
+    /* ================= SECTIONS ================= */
+    .tips-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+    .tips-section h2 { font-size: 2rem; margin-bottom: 0.75rem; text-align: center; }
+    .section-intro { text-align: center; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.75); font-size: 1rem; }
+
+    /* ================= TIP CARDS ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 380px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .tip-card h3 { padding: 1rem; font-size: 1.3rem; color: #ffffff; }
+    .tip-card li { list-style: none; padding: 0 1rem 1rem; color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 1rem; }
+    }
+    @media (max-width: 400px) { nav ul { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } .hero p { font-size: 1rem; } }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Odd vs Even Man Front Zones</h1>
+  <p>
+    
+Defensive recognition is vital to success as a coach or player. I cannot begin to tell you how many times I see people lacking defensive recognition. For example, most teams begin a play with a point guard at the top of the key. I have seen numerous teams struggle as soon as the opposing team switches to an odd man front (i.e. 1-3-1, 3-2, 1-2-2 defense) because now there is a defender in this space that was meant to set up the play. As a coach, you must have a counter for both even and odd man front zone defenses. I will show you what I mean below. 
+
+  </p>
+</section>
+<!-- ================= EVEN MAN FRONT ================= -->
+<section class="tips-section">
+  <h2>Even Man Front</h2>
+  <p class="section-intro">
+An even man front simply means that there is an even number of defensive players on the highest layer of defense (layer closest to half court). The most common even man front zone defense is the 2-3 zone. When playing against a 2-3 zone it is important to expose the gaps. My favorite strategy is a 1-3-1 offense against a 2-3 as it naturally exposes the gaps. 
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="even1.jpg" alt="Even Man Front Diagram 1">
+      <h3>Even Man Front – Alignment</h3>
+      <li>Positioning and spacing for even-man front zones to maximize coverage.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="even2.jpg" alt="Even Man Front Diagram 2">
+      <h3>Even Man Front – Rotations</h3>
+      <li>How defenders shift and communicate to cover passes and cutters.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="even3.jpg" alt="Even Man Front Diagram 3">
+      <h3>Even Man Front – Traps & Pressure</h3>
+      <li>Techniques to create turnovers and limit offensive options.</li>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ODD MAN FRONT ================= -->
+<section class="tips-section">
+  <h2>Odd Man Front</h2>
+  <p class="section-intro">
+   An odd-man front zone defense simply means there is an odd number on the highest layer of defense (i.e. 1-3-1, 1-2-2 or 3-2). In order to beat an odd man front zone defense, one needs to place people in the gaps. I highly recommend placing two players across the top as opposed to one in the middle. This spreads the defense and mitigates the pressure of the odd man front.  
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="odd1.jpg" alt="Odd Man Front Diagram 1">
+      <h3>Odd Man Front – Alignment</h3>
+      <li>Player positions, spacing, and angles in odd-man front zones.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="odd2.jpg" alt="Odd Man Front Diagram 2">
+      <h3>Odd Man Front – Rotations</h3>
+      <li>How defenders rotate to maintain coverage and pressure.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="odd3.jpg" alt="Odd Man Front Diagram 3">
+      <h3>Odd Man Front – Traps & Gaps</h3>
+      <li>Identifying gaps to trap the ball and force turnovers.</li>
+    </div>
+  </div>
+</section>
+
+
+
+</main>
+
+</body>
+</html>

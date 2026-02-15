@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a System for Play Calls | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; background: #0b0d18; flex-wrap: wrap;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.8); font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; transition: 0.2s; }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
+
+    /* ================= HERO ================= */
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
+
+    /* ================= SECTIONS ================= */
+    .tips-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+    .tips-section h2 { font-size: 2rem; margin-bottom: 0.75rem; text-align: center; }
+    .section-intro { text-align: center; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.75); font-size: 1rem; }
+
+    /* ================= TIP CARDS ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 380px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .tip-card h3 { padding: 1rem; font-size: 1.3rem; color: #ffffff; }
+    .tip-card li { list-style: none; padding: 0 1rem 1rem; color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 1rem; }
+    }
+    @media (max-width: 400px) { nav ul { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } .hero p { font-size: 1rem; } }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Creating a System for Play Calls</h1>
+  <p>
+    Organize your offensive and defensive strategies with a structured play call system for consistent team execution.
+  </p>
+</section>
+
+<!-- ================= PLAY CALL PRINCIPLES ================= -->
+<section class="tips-section">
+  <h2>Play Call Principles</h2>
+  <p class="section-intro">
+    Core concepts for building a play call system that’s clear, easy to remember, and actionable during games.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="hierarchy.jpg" alt="Hierarchy of Calls">
+      <h3>Hierarchy of Calls</h3>
+      <li>Organize calls by priority: urgent, situational, and optional to avoid confusion.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="terminology.jpg" alt="Consistent Terminology">
+      <h3>Consistent Terminology</h3>
+      <li>Use the same words across players and staff to ensure instant understanding.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="visuals.jpg" alt="Visual Cues">
+      <h3>Visual Cues</h3>
+      <li>Complement verbal calls with diagrams or hand signals to reinforce communication.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="prioritization.jpg" alt="Prioritization">
+      <h3>Prioritization</h3>
+      <li>Teach players to respond first to high-priority calls, then secondary ones.</li>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SYSTEM DESIGN ================= -->
+<section class="tips-section">
+  <h2>System Design</h2>
+  <p class="section-intro">
+    Structuring play calls into categories, sequences, and triggers for fluid in-game execution.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="categorization.jpg" alt="Categorization of Plays">
+      <h3>Categorization</h3>
+      <li>Group plays by type (offense, defense, press, transition) to simplify decision-making.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="sequence.jpg" alt="Sequence Planning">
+      <h3>Sequence Planning</h3>
+      <li>Set standard sequences for common situations to improve reaction speed under pressure.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="triggers.jpg" alt="Trigger Cues">
+      <h3>Trigger Cues</h3>
+      <li>Assign specific events or positions as triggers for calls to streamline execution.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="review.jpg" alt="Review & Adjust">
+      <h3>Review & Adjust</h3>
+      <li>Regularly evaluate the system to simplify, clarify, and improve in-game communication.</li>
+    </div>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>

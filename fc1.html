@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Court 1 on 1 Drill | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem; background: #0b0d18; flex-wrap: wrap;
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    nav a { color: rgba(255,255,255,0.8); font-weight: 600; padding: 0.4rem 0.8rem; border-radius: 6px; transition: 0.2s; }
+    nav a:hover, nav a.active { background: #5b2be0; color: white; }
+
+    /* ================= HERO ================= */
+    .hero { text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; margin: 0 auto; }
+
+    /* ================= SECTIONS ================= */
+    .tips-section { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
+    .tips-section h2 { font-size: 2rem; margin-bottom: 0.75rem; text-align: center; }
+    .section-intro { text-align: center; max-width: 800px; margin: 0 auto 2rem; color: rgba(255,255,255,0.75); font-size: 1rem; }
+
+    /* ================= TIP CARDS ================= */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 380px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .tip-card h3 { padding: 1rem; font-size: 1.3rem; color: #ffffff; }
+    .tip-card li { list-style: none; padding: 0 1rem 1rem; color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-top: 1rem; }
+    }
+    @media (max-width: 400px) { nav ul { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .hero h1 { font-size: 2.2rem; } .hero p { font-size: 1rem; } }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <h1>Full Court 1 on 1 Drill</h1>
+  <p>
+    Key techniques, spacing strategies, and tactical tips to improve individual skills in a full court 1 on 1 setting.
+  </p>
+</section>
+
+<!-- ================= DRILL TIPS ================= -->
+
+<section class="tips-section">
+  <h2>Defense Tips</h2>
+  <p class="section-intro">
+    Principles for staying in front, contesting drives, and forcing mistakes during full court 1 on 1.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="stance.jpg" alt="Defensive Stance">
+      <h3>Defensive Stance</h3>
+      <li>Maintain a low and balanced stance to react quickly to the ball handler.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="anticipation.jpg" alt="Anticipation">
+      <h3>Anticipation</h3>
+      <li>Read your opponent’s moves and anticipate their next action.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="closeout.jpg" alt="Closeout">
+      <h3>Closeout</h3>
+      <li>Approach the ball under control to contest shots without fouling.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="contain.jpg" alt="Contain Dribbler">
+      <h3>Contain Dribbler</h3>
+      <li>Force the attacker toward the sidelines and limit driving lanes.</li>
+    </div>
+  </div>
+</section>
+
+<section class="tips-section">
+  <h2>Offense Tips</h2>
+  <p class="section-intro">
+    Strategies for attacking, beating defenders, and creating scoring opportunities in 1 on 1 full court situations.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="dribblechange.jpg" alt="Change of Pace">
+      <h3>Change of Pace</h3>
+      <li>Mix speeds to throw off your defender and create open lanes.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="attackangles.jpg" alt="Attack Angles">
+      <h3>Attack Angles</h3>
+      <li>Drive at different angles to exploit defensive positioning.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="crossover.jpg" alt="Crossover Moves">
+      <h3>Crossover Moves</h3>
+      <li>Use fakes and crossovers to create separation and scoring opportunities.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="courtvision.jpg" alt="Court Vision">
+      <h3>Court Vision</h3>
+      <li>Scan ahead to anticipate defenders and open space for yourself.</li>
+    </div>
+  </div>
+</section>
+
+<section class="tips-section">
+  <h2>Transition Tips</h2>
+  <p class="section-intro">
+    How to quickly switch from offense to defense and vice versa in full court 1 on 1 scenarios.
+  </p>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <img src="recover.jpg" alt="Recover Quickly">
+      <h3>Recover Quickly</h3>
+      <li>Get back in position after a turnover or missed shot to maintain pressure.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="pushpace.jpg" alt="Push the Pace">
+      <h3>Push the Pace</h3>
+      <li>Take advantage of open court opportunities to score before the defense sets.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="spacing.jpg" alt="Maintain Spacing">
+      <h3>Maintain Spacing</h3>
+      <li>Keep proper spacing to allow room for moves and avoid crowding the ball handler.</li>
+    </div>
+
+    <div class="tip-card">
+      <img src="readopponent.jpg" alt="Read Opponent">
+      <h3>Read Opponent</h3>
+      <li>Observe your defender’s tendencies to make smart attack or defensive decisions.</li>
+    </div>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>
