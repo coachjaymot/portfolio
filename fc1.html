@@ -73,17 +73,19 @@
       font-size: 0.95rem;
     }
 
-    /* ================= VIDEO ================= */
+     /* ================= VIDEO (VERTICAL SHORTS) ================= */
     .video-container {
-      max-width: 1000px;
-      margin: 0 auto 5rem;
-      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem 5rem;
     }
-    .video-container iframe {
+
+    .vertical-video iframe {
       width: 100%;
-      height: 560px;
-      border: none;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
       border-radius: 16px;
+      border: none;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
@@ -129,98 +131,73 @@
 <section class="tips-section">
   <h2>Helpful Tips</h2>
   <p class="section-intro">
-    Essential concepts for defending, attacking, and transitioning effectively in full court 1 on 1.
+    Most youth coaches agree that teaching man to man defense first is vital in building a foundation of defensive understanding, but man to man defense can mean many things. Full court man to man pressure, shell defense (help), and denial just to name a few. I believe understanding the differences is important in the development of young players. Full court one on one is a very important drill to do for athletes to understand on ball man to man defense.
   </p>
 
   <div class="tips-grid">
 
     <!-- Defense -->
     <div class="tip-card">
-      <img src="stance.jpg" alt="Defensive Stance">
       <h3>Defensive Stance</h3>
-      <li>Stay low and balanced to react quickly to the ball handler.</li>
+      <li>Stay low and balanced (in an athletic stance) to react quickly to the ball handler.</li>
     </div>
 
     <div class="tip-card">
-      <img src="anticipation.jpg" alt="Anticipation">
       <h3>Anticipation</h3>
-      <li>Read your opponent’s hips and anticipate their direction.</li>
+      <li>Read your opponent’s hips and and try to cut them off.</li>
     </div>
 
     <div class="tip-card">
-      <img src="closeout.jpg" alt="Closeout">
       <h3>Controlled Closeout</h3>
-      <li>Contest without fouling—short, choppy steps into a stable stance.</li>
+      <li>Closeout with small and choppy steps that allow you to remain an arm's length from your opponent.</li>
     </div>
 
     <div class="tip-card">
-      <img src="contain.jpg" alt="Contain Dribbler">
       <h3>Contain the Dribbler</h3>
-      <li>Angle them to the sideline and reduce open space.</li>
+      <li>Angle them to the sideline or help defense to close space. Use boundaries and teammates to your advantage. This is where your defensive slide effort comes in handy.</li>
     </div>
 
     <!-- Offense -->
     <div class="tip-card">
-      <img src="dribblechange.jpg" alt="Change of Pace">
-      <h3>Change of Pace</h3>
-      <li>Explode after slowing down to create separation.</li>
+      <h3>Understanding When You're Beat</h3>
+      <li>When an opponent beats you with a first step or is about to gain an advantage of you, you must recognize and admit it.</li>
     </div>
 
     <div class="tip-card">
-      <img src="attackangles.jpg" alt="Attack Angles">
-      <h3>Attack Angles</h3>
-      <li>Attack outside the defender’s frame to force recovery.</li>
+      <h3>Turn, Sprint and beat them to a spot</h3>
+      <li>After you recognize that you are about to get beat, you must turn from a defensive stance into a sprinter's pose and sprint and beat your opponent to a spot to cut them off.</li>
+    </div>
+
+        <div class="tip-card">
+      <h3>Do Not Move Like A Crab</h3>
+      <li>The ball handler is running like it is a sprint. If they beat you, you cannot expect to keep up with them by moving laterally in a defensive slide position. You must turn and sprint.</li>
+    </div>
+
+    <!-- Offense -->
+    <div class="tip-card">
+      <h3>Player Without A Ball Should Be Faster Than A Player With A Ball</h3>
+      <li>Sprinting without a ball is much easier than with a ball. Defense should be able to get ahead.</li>
     </div>
 
     <div class="tip-card">
-      <img src="crossover.jpg" alt="Crossover Moves">
-      <h3>Crossover Moves</h3>
-      <li>Use deceleration, hesitation, and fake footwork to score.</li>
-    </div>
-
-    <div class="tip-card">
-      <img src="courtvision.jpg" alt="Court Vision">
-      <h3>Scan Ahead</h3>
-      <li>Read open space early to dictate the action.</li>
-    </div>
-
-    <!-- Transition -->
-    <div class="tip-card">
-      <img src="recover.jpg" alt="Recover Quickly">
-      <h3>Recover Quickly</h3>
-      <li>Immediate sprint after misses or turnovers to stay competitive.</li>
-    </div>
-
-    <div class="tip-card">
-      <img src="pushpace.jpg" alt="Push the Pace">
-      <h3>Push the Pace</h3>
-      <li>Apply pressure early before the defender resets.</li>
-    </div>
-
-    <div class="tip-card">
-      <img src="spacing.jpg" alt="Spacing">
-      <h3>Spacing</h3>
-      <li>Use the width of the court to stretch the defender.</li>
-    </div>
-
-    <div class="tip-card">
-      <img src="readopponent.jpg" alt="Read Opponent">
-      <h3>Read Tendencies</h3>
-      <li>Notice whether they overplay speed, angle, or physicality.</li>
+      <h3>Do Not Settle For Riding Someone's Hip</h3>
+      <li>A lot of players settle for running side by side with an offensive player. We want to get between them and the basket. We want to become a barrier, not a shoulder buddy.</li>
     </div>
 
   </div>
 </section>
 
-<!-- ================= SINGLE VIDEO ================= -->
 
-<section class="video-container">
-  <iframe 
-    src="https://www.youtube.com/embed/XXXXXXXXXXX" 
-    title="Full Court 1 on 1 Drill Video"
-    allowfullscreen>
-  </iframe>
-</section>
+
+  <!-- VIDEO -->
+  <section class="video-container vertical-video">
+    <iframe
+      src="https://www.youtube.com/embed/EjZ1fdr6Wqg"
+      title="1v1 Full-Court Drill"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
 
 </main>
 
