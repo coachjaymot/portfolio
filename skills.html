@@ -83,10 +83,10 @@
 
     /* ================= SKILLS GRID ================= */
     .skills-grid {
-      max-width: 1400px; 
+      max-width: 1600px;
       margin: 2.5rem auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 32px;
       justify-content: center;
       padding: 0 1rem;
@@ -94,7 +94,7 @@
 
     .section {
       background: #11162a;
-      padding: 2rem 2.5rem;
+      padding: 2rem 2rem;
       border-radius: 16px;
       border: 1px solid rgba(167,139,250,0.45);
       filter:
@@ -142,7 +142,12 @@
       }
     }
 
-    /* ================= MOBILE NAVBAR 3-PER-ROW ================= */
+    @media (max-width: 768px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -151,7 +156,7 @@
 
       nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+        grid-template-columns: repeat(3, 1fr);
         gap: 0.8rem;
         margin-top: 1rem;
         width: 100%;
@@ -167,21 +172,12 @@
       }
     }
 
-    /* ================= FALLBACK 2-PER-ROW FOR EXTRA SMALL SCREENS ================= */
     @media (max-width: 400px) {
       nav ul {
         grid-template-columns: repeat(2, 1fr);
         max-width: 300px;
       }
     }
-
-    /* ================= MOBILE PROJECT GALLERY ================= */
-    @media (max-width: 768px) {
-      .project-gallery {
-        grid-template-columns: 1fr;
-      }
-    }
-
   </style>
 </head>
 
@@ -207,46 +203,50 @@
   <div class="section">
     <h2>Professional Skills</h2>
     <ul>
-<li>Coaching & Athlete Development</li>
-<li>Applied Research Translation</li>
-<li>Program Design & Implementation</li>
-<li>Instructional Design</li>
-<li>Curriculum Development</li>
-<li>Coach Education & Professional Development</li>
-<li>Team Leadership & Mentorship</li>
-<li>Stakeholder & Community Engagement</li>
-<li>Project Management</li>
-<li>Sports Management</li>
-<li>Operations Management</li>
-<li>Facilities Management</li>
-<li>Grant Writing</li>
-<li>Fitness Test Administration</li>
-      <h2>Hybrid / Applied Skills</h2>
-<ul>
-<li>Sport Science × Technology Integration</li>
-<li>Coaching Systems Design</li>
-<li>Research-to-Practice Translation</li>
-<li>Equity-Focused Program Evaluation</li>
-<li>Digital Coaching Platform Development</li>
-<li>Applied Human Performance Analytics</li>
-  </ul>
-</div>
+      <li>Coaching & Athlete Development</li>
+      <li>Applied Research Translation</li>
+      <li>Program Design & Implementation</li>
+      <li>Instructional Design</li>
+      <li>Curriculum Development</li>
+      <li>Coach Education & Professional Development</li>
+      <li>Team Leadership & Mentorship</li>
+      <li>Stakeholder & Community Engagement</li>
+      <li>Project Management</li>
+      <li>Sports Management</li>
+      <li>Operations Management</li>
+      <li>Facilities Management</li>
+      <li>Grant Writing</li>
+      <li>Fitness Test Administration</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Hybrid / Applied Skills</h2>
+    <ul>
+      <li>Sport Science × Technology Integration</li>
+      <li>Coaching Systems Design</li>
+      <li>Research-to-Practice Translation</li>
+      <li>Equity-Focused Program Evaluation</li>
+      <li>Digital Coaching Platform Development</li>
+      <li>Applied Human Performance Analytics</li>
+    </ul>
+  </div>
 
   <div class="section">
     <h2>Technical Skills</h2>
     <ul>
-<li>Data Literacy</li>
-<li>Data Interpretation & Insight Generation</li>
-<li>Research Design & Thematic Analysis (ATLAS.ti)</li>
-<li>Survey Development & Data Collection (Qualtrics, Survey Monkey, Google Forms)</li>
-<li>Statistical Methods (IBM SPSS)</li>
-<li>Data Analysis & Visualization (Excel, Tableau)</li>
-<li>GIS & Spatial Analysis (ArcGIS)</li>
-<li>Database Management (MySQL, SQL)</li>
-<li>Content Architecture & Information Design</li>
-<li>User Interface (UI) & User Experience (UX)</li>
-<li>Website Design (Wireframing, HTML, CSS, JavaScript)</li>
-<li>Video & Photo Editing (Adobe Photoshop, Adobe Premiere, Camtasia, iMovie, YouTube Studio)</li>
+      <li>Data Literacy</li>
+      <li>Data Interpretation & Insight Generation</li>
+      <li>Research Design & Thematic Analysis (ATLAS.ti)</li>
+      <li>Survey Development & Data Collection (Qualtrics, Survey Monkey, Google Forms)</li>
+      <li>Statistical Methods (IBM SPSS)</li>
+      <li>Data Analysis & Visualization (Excel, Tableau)</li>
+      <li>GIS & Spatial Analysis (ArcGIS)</li>
+      <li>Database Management (MySQL, SQL)</li>
+      <li>Content Architecture & Information Design</li>
+      <li>User Interface (UI) & User Experience (UX)</li>
+      <li>Website Design (Wireframing, HTML, CSS, JavaScript)</li>
+      <li>Video & Photo Editing (Adobe Photoshop, Adobe Premiere, Camtasia, iMovie, YouTube Studio)</li>
     </ul>
   </div>
 
@@ -273,7 +273,6 @@
 <!-- ================= GALLERY ================= -->
 <div class="gallery-wrapper">
   <div class="gallery-title">Past Projects</div>
-
   <div class="project-gallery">
     <img src="cadillachouse1.png" alt="Project 1">
     <img src="cadillachouse2.png" alt="Project 2">
