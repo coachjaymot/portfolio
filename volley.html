@@ -143,19 +143,30 @@
       nav ul { grid-template-columns: repeat(2, 1fr); }
     }
 
-    .video-container {
-      display: flex;
-      justify-content: center;
+    /* ================= VIDEO ================= */
+    .video-section {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 0 2rem 5rem;
     }
 
-    .vertical-video iframe {
+    .video-container {
+      position: relative;
       width: 100%;
-      max-width: 420px;
-      aspect-ratio: 9 / 16;
+      padding-bottom: 56.25%; /* Fixed for landscape 16:9 videos */
+      height: 0;
+      overflow: hidden;
       border-radius: 16px;
-      border: none;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -178,7 +189,6 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <h1>Tennis Volley</h1>
     <p>
@@ -186,7 +196,6 @@
     </p>
   </section>
 
-  <!-- VOLLEY TIPS -->
   <section class="tips-section">
     <h2>Key Volley Fundamentals</h2>
     <p class="section-intro">
@@ -234,17 +243,19 @@
     </div>
   </section>
 
-  <!-- VIDEO -->
-  <section class="video-container vertical-video">
-    <iframe
-      src="https://www.youtube.com/watch?v=xhSk2q2FR28"
-      title="Tennis Volley Drill"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <section class="video-section">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/xhSk2q2FR28"
+        title="Tennis Volley Drill"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
 </main>
 
 </body>
 </html>
+
