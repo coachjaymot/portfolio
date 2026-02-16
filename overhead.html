@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tennis Volley | Jeffrey Jaymot</title>
+  <title>Tennis Overhead | Jeffrey Jaymot</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -143,19 +143,30 @@
       nav ul { grid-template-columns: repeat(2, 1fr); }
     }
 
-    .video-container {
-      display: flex;
-      justify-content: center;
+    /* ================= VIDEO ================= */
+    .video-section {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 0 2rem 5rem;
     }
 
-    .vertical-video iframe {
+    .video-container {
+      position: relative;
       width: 100%;
-      max-width: 420px;
-      aspect-ratio: 9 / 16;
+      padding-bottom: 56.25%; /* Standard 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
       border-radius: 16px;
-      border: none;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -178,7 +189,6 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <h1>Tennis Overhead</h1>
     <p>
@@ -186,29 +196,25 @@
     </p>
   </section>
 
-  <!-- VOLLEY TIPS -->
   <section class="tips-section">
-    <h2>Key Volley Fundamentals</h2>
+    <h2>Key Overhead Fundamentals</h2>
     <p class="section-intro">
-      Mastering the volley requires early preparation, balanced footwork, and controlled contact.
+      Mastering the overhead requires early preparation, balanced footwork, and controlled contact.
     </p>
 
     <div class="tips-grid">
 
       <div class="tip-card">
-        <img src="images/tennis-volley-grip.jpg" alt="Tennis volley grip">
         <h3>Grip</h3>
         <li>Use a continental grip.</li>
       </div>
 
       <div class="tip-card">
-        <img src="images/tennis-volley-footwork.jpg" alt="Tennis volley footwork">
         <h3>Imagine You Are Serving</h3>
         <li>I firmly believe in transferable skills. The overhead can be very similar to one's serving motion with one exception. A serve includes a toss that is in the server's control. An overhead is determined by your opponent. Some are easier than others to get to, but preparing by moving to a space that gives you a serve-like comfort is always good. Racket belongs overhead and slighlty in front of you upon contact. Use the arm that you would use for the serve toss as a pointer/guide hand to track the ball.</li>
       </div>
 
       <div class="tip-card">
-        <img src="images/tennis-volley-contact.jpg" alt="Tennis volley contact point">
         <h3>Side To Target with Both Hands on The Racket</h3>
         <li>Turn to the side with both hands on the racket. Having both hands on the racket during the turn motion encourages one to position their feet properly. Too many people remain in an open stance and end up falling because they end up back pedaling on their heels in this open stance. Pickleball players are more inclined to stay open stance at first due to the presence of the kitchen. A lot of falls in pickleball because people do not get in the habit of turning side to target.</li>
       </div>
@@ -216,14 +222,15 @@
     </div>
   </section>
 
-  <!-- VIDEO -->
-  <section class="video-container vertical-video">
-    <iframe
-      src="https://www.youtube.com/watch?v=rzggh0YNlzQ"
-      title="Tennis Volley Drill"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
+  <section class="video-section">
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/rzggh0YNlzQ"
+        title="Tennis Overhead Tips"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
 </main>
