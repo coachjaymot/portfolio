@@ -10,7 +10,7 @@
   <style>
     /* ================= GLOBAL ================= */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #0f1220; color: #e5e7eb; line-height: 1.6; }
+    body { background: #0f1220; color: #e5e7eb; }
     a { text-decoration: none; color: inherit; }
 
     /* ================= HEADER / NAV ================= */
@@ -103,56 +103,52 @@
       padding: 1.5rem;
       width: 100%;
       max-width: 380px;
-      transition: transform 0.3s ease;
+      text-align: center;
     }
 
-    .tip-card:hover {
-      transform: translateY(-5px);
+    .tip-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
 
     .tip-card h3 {
       font-size: 1.3rem;
       margin-bottom: 0.75rem;
       color: #ffffff;
-      border-bottom: 2px solid #5b2be0;
-      display: inline-block;
-      padding-bottom: 4px;
     }
 
     .tip-card li {
       list-style: none;
       color: rgba(255,255,255,0.8);
       font-size: 0.95rem;
-      line-height: 1.6;
-      margin-top: 0.5rem;
+      line-height: 1.5;
     }
 
     /* ================= VIDEOS ================= */
-    .video-grid {
+    .three-videos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
       padding: 0 2rem 5rem;
-      max-width: 1300px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .video-card {
-      background: #11162a;
-      padding: 1.25rem;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       text-align: center;
     }
 
     .video-container {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      padding-bottom: 56.25%; /* Fixed for landscape 16:9 videos */
       height: 0;
       overflow: hidden;
-      border-radius: 12px;
-      margin-bottom: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
     .video-container iframe {
@@ -165,10 +161,9 @@
     }
 
     .video-card p {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #ffffff;
-      letter-spacing: 0.5px;
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
     }
 
     /* ================= RESPONSIVE ================= */
@@ -181,11 +176,13 @@
         margin-top: 1rem;
       }
       .hero h1 { font-size: 2.4rem; }
+      .three-videos {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 400px) {
       nav ul { grid-template-columns: repeat(2, 1fr); }
-      .video-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -225,44 +222,45 @@
     <div class="tips-grid">
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-grip.jpg" alt="Tennis backhand grip">
         <h3>Grip & Preparation</h3>
-        <li>Two main variations: two-handed and one-handed. On a two-handed backhand, ensure your non-dominant hand is the dominant, power-producing hand.</li>
+        <li>There are two main variations of the backhand. The two-handed and the one-handed backhand. Depending on which one you choose will determine which grip you use. The videos below discuss the grips of each choice. One important tip when you use a two-handed backhand is that you have to allow your non-dominant hand to be the dominant, power producing, and in-control hand. As simple as that sounds, not everyone does it!</li>
       </div>
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-footwork.jpg" alt="Tennis backhand footwork">
         <h3>Recognition & Footwork</h3>
-        <li>Mirror your forehand movements. Turn side-to-target quickly. Recognize the ball early to make coiling and stepping second nature.</li>
+        <li>One helpful cue that has always helped me is to mirror forehand movements for the backhand and this begins with the feet. Turning side to target (on the opposite side) is key here. Many players try to avoid hitting a backhand early on and this causes them to resist turning to their backhand side. Players need to recognize when they will need to hit a backhand and then make turning to that side second nature. As they get better at turning to this side, they will eventually begin to coil as they turn side to target and step back foot first followed by front foot.</li>
       </div>
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-contact.jpg" alt="Tennis backhand contact">
         <h3>Set Position</h3>
-        <li>The side-to-target preparation position. Keep the racket cocked back and ready to move forward through the ball.</li>
+        <li>Similar to the forehand, the set position is the position in which we are preparing to hit the ball. For beginners, this is the side-to-target position (at least if we are thinking about closed or neutral stance). We will have the racket cocked back in this position.</li>
       </div>
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-followthrough.jpg" alt="Tennis backhand follow through">
         <h3>Swinging Low to High</h3>
-        <li>Mirror the forehand arc. Swing from the hip to the opposite shoulder to ensure consistent lift and safety over the net.</li>
+        <li>After we are prepared in the set position we will prepare to swing. Continue with the theme of mirroring the forehand. We will swing low to high here or from our hip to the opposite shoulder.</li>
       </div>
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-contact.jpg" alt="Tennis backhand contact">
         <h3>Contact Point</h3>
-        <li>Strike the ball slightly out in front of the body. This allows both eyes to track the ball and ensures the body supports the racket.</li>
+        <li>When we strike the ball we want to make contact slightly out in front of us and towards our backhand side.</li>
       </div>
 
       <div class="tip-card">
+        <img src="images/tennis-backhand-followthrough.jpg" alt="Tennis backhand follow through">
         <h3>Follow-Through & Recovery</h3>
-        <li>Allow the swing to continue upward and over the shoulder. Finish the motion to naturally decelerate the racket head.</li>
+        <li>Follow through by allowing the swing to continue upward and over the shoulder.</li>
       </div>
 
     </div>
   </section>
 
-  <section class="tips-section">
-    <h2>Masterclass Demonstrations</h2>
-    <p class="section-intro">Detailed breakdowns for the three primary backhand techniques.</p>
-  </section>
-
-  <section class="video-grid">
+  <section class="three-videos">
 
     <div class="video-card">
       <div class="video-container">
