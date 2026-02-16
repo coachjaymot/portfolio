@@ -10,7 +10,7 @@
   <style>
     /* ================= GLOBAL ================= */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #0f1220; color: #e5e7eb; }
+    body { background: #0f1220; color: #e5e7eb; line-height: 1.6; }
     a { text-decoration: none; color: inherit; }
 
     /* ================= HEADER / NAV ================= */
@@ -68,7 +68,7 @@
       margin: 0 auto;
     }
 
-    /* ================= TIPS ================= */
+    /* ================= TIPS SECTION ================= */
     .tips-section {
       max-width: 1200px;
       margin: 0 auto;
@@ -103,33 +103,61 @@
       padding: 1.5rem;
       width: 100%;
       max-width: 380px;
-      text-align: center;
+      transition: transform 0.3s ease;
     }
 
-    .tip-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 1rem;
+    .tip-card:hover {
+      transform: translateY(-5px);
     }
 
     .tip-card h3 {
       font-size: 1.3rem;
       margin-bottom: 0.75rem;
       color: #ffffff;
+      border-bottom: 2px solid #5b2be0;
+      display: inline-block;
+      padding-bottom: 4px;
     }
 
     .tip-card li {
       list-style: none;
       color: rgba(255,255,255,0.8);
       font-size: 0.95rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    /* ================= VIDEO STYLING ================= */
+    .video-wrapper {
+      max-width: 900px;
+      margin: 2rem auto 5rem;
+      background: #11162a;
+      padding: 1.5rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
-      header { flex-direction: column; }
+      header { flex-direction: column; text-align: center; }
       nav ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -142,21 +170,6 @@
     @media (max-width: 400px) {
       nav ul { grid-template-columns: repeat(2, 1fr); }
     }
-
-    .video-container {
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem 5rem;
-}
-
-.vertical-video iframe {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 9 / 16;
-  border-radius: 16px;
-  border: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
   </style>
 </head>
 
@@ -178,7 +191,6 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <h1>Tennis Forehand</h1>
     <p>
@@ -186,7 +198,6 @@
     </p>
   </section>
 
-  <!-- FOREHAND TIPS -->
   <section class="tips-section">
     <h2>Key Forehand Fundamentals</h2>
     <p class="section-intro">
@@ -198,48 +209,55 @@
 
       <div class="tip-card">
         <h3>Grip & the Ready Position</h3>
-        <li>Although forehands can come in a variety of grips, the semi-western is by far the most common among ATP players and the one that I recommend. Typically we prepare in what we call the ready position, which means a player will be in a balanced athletic stance with both hands on the racket and the racket tilted in the up position.</li>
+        <li>The semi-western is by far the most common among ATP players. Prepare in an athletic stance with both hands on the racket, tilted in the up position.</li>
       </div>
 
       <div class="tip-card">
         <h3>Footwork</h3>
-        <li>When I first teach the Forehand, I teach it in a Closed or Neutral Stance. This means that I position an individual side to target. This helps me get them in the habit of stepping in opposition, meaning if they are right-handed, they need to step forward with their left when turning side to target. As this becomes more advance, they will actually plant their back leg first, followed by their front foot in order to transition their momentum forward.</li>
+        <li>Master the Closed or Neutral Stance first. Focus on stepping in opposition: if right-handed, step forward with your left foot to turn side-to-target.</li>
       </div>
 
       <div class="tip-card">
         <h3>Set Position</h3>
-        <li>As we get our bodies side to target we are getting into the set position. We can also call this the star position for young kids as it looks like a star. This set position is where we prepare with a back swing. As players advance this turns into a coiling action.</li>
+        <li>Coil the body side-to-target into the "Star Position." This backswing preparation allows for explosive energy storage in the trunk.</li>
       </div>
 
       <div class="tip-card">
         <h3>Swinging Low to High</h3>
-        <li>Now that we are in the set position, it is time to swing. Typically, we start novice players out by swinging low to high or from their hip to their opposite shoulder.</li>
+        <li>Develop consistency by swinging from the hip to the opposite shoulder. This creates the necessary arc for net clearance and safety.</li>
       </div>
 
       <div class="tip-card">
         <h3>Spacing and Contact Point</h3>
-        <li>When we strike the ball we want to make contact slightly out in front of us and towards our dominant side. A great tip is to use our off arm to measure the ideal distance between the ball and our body.</li>
+        <li>Strike the ball slightly out in front and to your dominant side. Use your off-arm to measure the ideal distance from your body.</li>
       </div>
 
       <div class="tip-card">
         <h3>Brush Up on the Ball</h3>
-        <li>As we make contact with the ball it is important to brush up on the ball or pronate the wrist. This develops top spin. The motion of the wrist should resemble a car's windshield wiper. This should then lead to a finishing follow through motion.</li>
+        <li>Use a "windshield wiper" motion to brush up on the ball. This generates TopSpin, keeping powerful shots inside the lines.</li>
       </div>
-
 
     </div>
   </section>
-<section class="video-container vertical-video">
-  <iframe
-    src="https://www.youtube.com/watch?v=IhinAAE37OY"
-    title="Tennis Forehand Drill"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-</section>
 
+  <section class="tips-section">
+    <h2>Video Demonstration</h2>
+    <p class="section-intro">Master the perfect forehand with this 5-step masterclass by Top Tennis Training.</p>
+    
+    <div class="video-wrapper">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/IhinAAE37OY" 
+          title="Hit The Perfect Forehand in 5 Steps" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 </body>
 </html>
+
