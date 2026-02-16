@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Backhand | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= TIPS ================= */
+    .tips-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .tip-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .tip-card li {
+      list-style: none;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* ================= VIDEOS ================= */
+    .three-videos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 0 2rem 5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      text-align: center;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .video-card p {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+      .hero h1 { font-size: 2.4rem; }
+      .three-videos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      nav ul { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Tennis Backhand</h1>
+    <p>
+      A dependable backhand is built on balance, timing, and efficient movement.
+    </p>
+  </section>
+
+  <!-- BACKHAND TIPS -->
+  <section class="tips-section">
+    <h2>Key Backhand Fundamentals</h2>
+    <p class="section-intro">
+      Whether one-handed or two-handed, strong backhands rely on preparation,
+      spacing, and clean contact.
+    </p>
+
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-grip.jpg" alt="Tennis backhand grip">
+        <h3>Grip & Preparation</h3>
+        <li>There are two main variations of the backhand. The two-handed and the one-handed backhand. Depending on which one you choose will determine which grip you use. The videos below discuss the grips of each choice. One important tip when you use a two-handed backhand is that you have to allow your non-dominant hand to be the dominant, power producing, and in-control hand. As simple as that sounds, not everyone does it!</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-footwork.jpg" alt="Tennis backhand footwork">
+        <h3>Recognition & Footwork</h3>
+        <li>One helpful cue that has always helped me is to mirror forehand movements for the backhand and this begins with the feet. Turning side to target (on the opposite side) is key here. Many players try to avoid hitting a backhand early on and this causes them to resist turning to their backhand side. Players need to recognize when they will need to hit a backhand and then make turning to that side second nature. As they get better at turning to this side, they will eventually begin to coil as they turn side to target and step back foot first followed by front foot.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-contact.jpg" alt="Tennis backhand contact">
+        <h3>Set Position</h3>
+        <li>Similar to the forehand, the set position is the position in which we are preparing to hit the ball. For beginners, this is the side-to-target position (at least if we are thinking about closed or neutral stance). We will have the racket cocked back in this position.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-followthrough.jpg" alt="Tennis backhand follow through">
+        <h3>Swinging Low to High</h3>
+        <li>After we are prepared in the set position we will prepare to swing. Continue with the theme of mirroring the forehand. We will swing low to high here or from our hip to the opposite shoulder.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-contact.jpg" alt="Tennis backhand contact">
+        <h3>Contact Point</h3>
+        <li>When we strike the ball we want to make contact slightly out in front of us and towards our backhand side.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-backhand-followthrough.jpg" alt="Tennis backhand follow through">
+        <h3>Follow-Through & Recovery</h3>
+        <li>Follow through by allowing the swing to continue upward and over the shoulder.</li>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="three-videos">
+
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/watch?v=i1k8MLOsOwI"
+        title="Two-Handed Backhand"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <p>Two-Handed Backhand</p>
+    </div>
+
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/watch?v=m9qd3OG0Rr8"
+        title="One-Handed Backhand"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <p>One-Handed Backhand</p>
+    </div>
+
+    <div class="video-card">
+      <iframe
+        src="https://www.youtube.com/watch?v=D59s1GT1HEE"
+        title="Backhand Slice"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <p>Slice Backhand</p>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>

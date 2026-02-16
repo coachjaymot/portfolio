@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Forehand | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= TIPS ================= */
+    .tips-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .tip-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .tip-card li {
+      list-style: none;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+      .hero h1 { font-size: 2.4rem; }
+    }
+
+    @media (max-width: 400px) {
+      nav ul { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .video-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem 5rem;
+}
+
+.vertical-video iframe {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Tennis Forehand</h1>
+    <p>
+      The foundation of modern tennis — built on spacing, balance, and clean contact.
+    </p>
+  </section>
+
+  <!-- FOREHAND TIPS -->
+  <section class="tips-section">
+    <h2>Key Forehand Fundamentals</h2>
+    <p class="section-intro">
+      A consistent forehand starts with preparation and ends with balance.
+      These concepts apply across age groups and skill levels.
+    </p>
+
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <h3>Grip & the Ready Position</h3>
+        <li>Although forehands can come in a variety of grips, the semi-western is by far the most common among ATP players and the one that I recommend. Typically we prepare in what we call the ready position, which means a player will be in a balanced athletic stance with both hands on the racket and the racket tilted in the up position.</li>
+      </div>
+
+      <div class="tip-card">
+        <h3>Footwork</h3>
+        <li>When I first teach the Forehand, I teach it in a Closed or Neutral Stance. This means that I position an individual side to target. This helps me get them in the habit of stepping in opposition, meaning if they are right-handed, they need to step forward with their left when turning side to target. As this becomes more advance, they will actually plant their back leg first, followed by their front foot in order to transition their momentum forward.</li>
+      </div>
+
+      <div class="tip-card">
+        <h3>Set Position</h3>
+        <li>As we get our bodies side to target we are getting into the set position. We can also call this the star position for young kids as it looks like a star. This set position is where we prepare with a back swing. As players advance this turns into a coiling action.</li>
+      </div>
+
+      <div class="tip-card">
+        <h3>Swinging Low to High</h3>
+        <li>Now that we are in the set position, it is time to swing. Typically, we start novice players out by swinging low to high or from their hip to their opposite shoulder.</li>
+      </div>
+
+      <div class="tip-card">
+        <h3>Spacing and Contact Point</h3>
+        <li>When we strike the ball we want to make contact slightly out in front of us and towards our dominant side. A great tip is to use our off arm to measure the ideal distance between the ball and our body.</li>
+      </div>
+
+      <div class="tip-card">
+        <h3>Brush Up on the Ball</h3>
+        <li>As we make contact with the ball it is important to brush up on the ball or pronate the wrist. This develops top spin. The motion of the wrist should resemble a car's windshield wiper. This should then lead to a finishing follow through motion.</li>
+      </div>
+
+
+    </div>
+  </section>
+<section class="video-container vertical-video">
+  <iframe
+    src="https://www.youtube.com/watch?v=IhinAAE37OY"
+    title="Tennis Forehand Drill"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</section>
+
+
+</main>
+
+</body>
+</html>

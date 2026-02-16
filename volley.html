@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tennis Volley | Jeffrey Jaymot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #0f1220; color: #e5e7eb; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ================= HEADER / NAV ================= */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      background: #0b0d18;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #5b2be0;
+      color: white;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ================= TIPS ================= */
+    .tips-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tips-section h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .tip-card {
+      background: #11162a;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .tip-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .tip-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    .tip-card li {
+      list-style: none;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width: 900px) {
+      header { flex-direction: column; }
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.8rem;
+        margin-top: 1rem;
+      }
+      .hero h1 { font-size: 2.4rem; }
+    }
+
+    @media (max-width: 400px) {
+      nav ul { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem 5rem;
+    }
+
+    .vertical-video iframe {
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 9 / 16;
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Jeffrey Jaymot</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="professional.html">Professional Experience</a></li>
+      <li><a href="skills.html">Skill Portfolio</a></li>
+      <li><a href="coaching.html">Coaching Career</a></li>
+      <li><a href="athletic.html">Athletic Career</a></li>
+      <li><a href="tips.html" class="active">Sports Tips</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Tennis Volley</h1>
+    <p>
+      Quick reactions and compact swings are essential for effective net play in tennis.
+    </p>
+  </section>
+
+  <!-- VOLLEY TIPS -->
+  <section class="tips-section">
+    <h2>Key Volley Fundamentals</h2>
+    <p class="section-intro">
+      Mastering the volley requires early preparation, balanced footwork, and controlled contact.
+    </p>
+
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-grip.jpg" alt="Tennis volley grip">
+        <h3>Racquet Up</h3>
+        <li>When we are located near the net or we are likely going to receive a volley it is important to have your racket up. It takes more time to bring your racket up if you are resting it with a limp arm than if you are in ready position with your racket up already. Keeping your racket up keeps the volley movement compact as opposed to making it a much bigger motion if you have your racket down.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-footwork.jpg" alt="Tennis volley footwork">
+        <h3>Continental Grip & make a V</h3>
+        <li>Other strokes tend to have grip variations, but continental is the go-to grip for volleys. I also tell beginners to make a V between their forearm and the racket.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-contact.jpg" alt="Tennis volley contact point">
+        <h3>Split Step</h3>
+        <li>Split your feet as your opponent strikes the ball and land softly on both. Then prepare to turn your body (starting with your feet) to volley.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-followthrough.jpg" alt="Tennis volley follow through">
+        <h3>Step Towards the Ball</h3>
+        <li>After we split step and begin to turn our body towards the ball, we need to step towards the ball. This helps transfer our weight forward.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-contact.jpg" alt="Tennis volley contact point">
+        <h3>Short Punch & Contact In Front</h3>
+        <li>Use a compact punch. No back swing and no follow through. Meet the ball in front of your lead hip.</li>
+      </div>
+
+      <div class="tip-card">
+        <img src="images/tennis-volley-followthrough.jpg" alt="Tennis volley follow through">
+        <h3>Recover</h3>
+        <li>Since you are at the net you will have less time to recover and react to the next ball. It is very important that after you volley a ball that you prepare as if a ball will be coming right back quickly.</li>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-container vertical-video">
+    <iframe
+      src="https://www.youtube.com/watch?v=xhSk2q2FR28"
+      title="Tennis Volley Drill"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+</main>
+
+</body>
+</html>
