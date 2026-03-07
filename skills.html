@@ -133,6 +133,59 @@
       filter:
         drop-shadow(0 0 6px rgba(167,139,250,0.3))
         drop-shadow(0 0 14px rgba(91,43,224,0.25));
+      display: block;
+    }
+
+    /* ================= PROJECT CARDS ================= */
+    .project-gallery a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .project-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1rem;
+      background: rgba(15, 18, 32, 0.9);
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay {
+      transform: translateY(0);
+    }
+
+    .project-overlay h3 {
+      color: #a78bfa;
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-overlay p {
+      color: rgba(255,255,255,0.88);
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
 
     /* ================= RESPONSIVE ================= */
@@ -220,24 +273,23 @@
     </ul>
   </div>
 
-<div class="section">
-  <h2>Hybrid / Applied Skills</h2>
-  <ul>
-    <li>Sport Science × Technology Integration</li>
-    <li>Coaching Systems Design</li>
-    <li>Research-to-Practice Translation</li>
-    <li>Digital Coaching Platform Development</li>
-    <li>Applied Human Performance Analytics</li>
-    <li>Performance Data Integration</li>
-    <li>Online/Remote Training Systems</li>
-    <li>Applied Sports Analytics</li>
-    <li>Athlete Focused Educational Technology Implementation</li>
-    <li>Equity & Inclusion Program Implementation</li>
-    <li>Multimodal Learning Design</li>
-    <li>Integrated Facility Planning</li>
-  </ul>
-</div>
-
+  <div class="section">
+    <h2>Hybrid / Applied Skills</h2>
+    <ul>
+      <li>Sport Science × Technology Integration</li>
+      <li>Coaching Systems Design</li>
+      <li>Research-to-Practice Translation</li>
+      <li>Digital Coaching Platform Development</li>
+      <li>Applied Human Performance Analytics</li>
+      <li>Performance Data Integration</li>
+      <li>Online/Remote Training Systems</li>
+      <li>Applied Sports Analytics</li>
+      <li>Athlete-Focused Educational Technology Implementation</li>
+      <li>Equity & Inclusion Program Implementation</li>
+      <li>Multimodal Learning Design</li>
+      <li>Integrated Facility Planning</li>
+    </ul>
+  </div>
 
   <div class="section">
     <h2>Technical Skills</h2>
@@ -245,8 +297,8 @@
       <li>Data Literacy</li>
       <li>Data Interpretation & Insight Generation</li>
       <li>Research Design & Thematic Analysis (ATLAS.ti)</li>
-      <li>Survey Development & Data Collection (Qualtrics, Survey Monkey, Google Forms)</li>
-      <li>Statistical Methods </li>
+      <li>Survey Development & Data Collection (Qualtrics, SurveyMonkey, Google Forms)</li>
+      <li>Statistical Methods</li>
       <li>Data Analysis & Visualization (Excel, Tableau)</li>
       <li>GIS & Spatial Analysis (ArcGIS)</li>
       <li>Database Management (MySQL, SQL)</li>
@@ -261,17 +313,17 @@
     <h2>Software / Programs</h2>
     <ul>
       <li>Microsoft Office Suite (Word, Excel, PowerPoint, Teams, Access, Outlook)</li>
-      <li>Adobe Creative Suite (Photoshop, Premier)</li>
+      <li>Adobe Creative Suite (Photoshop, Premiere)</li>
       <li>Google Workspace (Docs, Sheets, Slides, Forms, Sites)</li>
       <li>Computer Aided Design / Digital Media Tools (AutoCAD, SketchUp, TinkerCAD)</li>
       <li>Operating Systems (macOS, Windows)</li>
-      <li>Geographic Information Systems (ARCGIS)</li>
+      <li>Geographic Information Systems (ArcGIS)</li>
       <li>Learning Management Systems (Blackboard, Canvas)</li>
       <li>E-ticketing Platforms (GoFan)</li>
       <li>Facilities Management (Facilitron)</li>
-      <li>Github</li>
-      <li>Visual Code Studio</li>
-      <li>AI (Chatgpt, Grok, Gemini, Canva)</li>
+      <li>GitHub</li>
+      <li>Visual Studio Code</li>
+      <li>AI (ChatGPT, Grok, Gemini, Canva)</li>
     </ul>
   </div>
 
@@ -280,7 +332,41 @@
 <!-- ================= GALLERY ================= -->
 <div class="gallery-wrapper">
   <div class="gallery-title">Past Projects</div>
+
   <div class="project-gallery">
+
+    <!-- NEW CLICKABLE PROJECT CARDS -->
+    <a href="https://docs.google.com/document/d/15vMUURLHvVHaY3WIO0vJ6t7TpuXimRwXT41NrMZ__0Y/edit?usp=sharing" target="_blank">
+      <div class="project-card">
+        <img src="cadillachouse1.png" alt="Modern CAD House">
+        <div class="project-overlay">
+          <h3>Seasonal Programming</h3>
+          <p>Architectural modeling project exploring modern residential structure and exterior design.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="project2.html" target="_blank">
+      <div class="project-card">
+        <img src="cadillachouse2.png" alt="Residential CAD Model">
+        <div class="project-overlay">
+          <h3>Physical Education Website</h3>
+          <p>Second design iteration focused on spatial layout, form, and structural balance.</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="project3.html" target="_blank">
+      <div class="project-card">
+        <img src="structure.png" alt="Structural Framework Model">
+        <div class="project-overlay">
+          <h3>Lesson Plan Example</h3>
+          <p>3D framework modeling project highlighting engineering concepts and design stability.</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- ORIGINAL GALLERY IMAGES -->
     <img src="cadillachouse1.png" alt="Project 1">
     <img src="cadillachouse2.png" alt="Project 2">
     <img src="structure.png" alt="Project 3">
@@ -290,6 +376,7 @@
     <img src="swivelbase.png" alt="Project 7">
     <img src="jeffwalker.JPEG" alt="Project 8">
     <img src="PEsite.png" alt="Project 9">
+
   </div>
 </div>
 
